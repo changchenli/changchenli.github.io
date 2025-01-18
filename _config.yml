@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Changchen Li / Personal Homepage"
+title                    : "Changchen Li / Homepage"
 title_separator          : "-"
 name                     : &name "Changchen Li"
 description              : &description "An engineering mechanics student from HUST"
