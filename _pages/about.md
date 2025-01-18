@@ -15,5 +15,6 @@ I am currently a junior student at the[School of Aerospace Engineering](https://
 You can go to a dedicated tab to find my CV or directly download it here: [Changchen Li's Curriculum Vitae](../assets/Curriculum_Vitae.pdf).
 
 If you would like to connect with me, feel free to reach out through the following platforms:
+
 [Email](mailto:changchen_li@hust.edu.cn) / [Github](https://github.com/changchenli) / [Wechat](../images/wechat.jpg)
 
