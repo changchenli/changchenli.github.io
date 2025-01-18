@@ -1,4 +1,3 @@
-Welcome to my personal website. Here, you can explore my educational background, honors, curriculum vitae, and personal interests etc.
 ---
 permalink: /
 title: "About me"
@@ -7,6 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
+Welcome to my personal website. Here, you can explore my educational background, honors, curriculum vitae, and personal interests etc.
 
 I am currently a junior student at the[School of Aerospace Engineering](https://ae.hust.edu.cn/), [Huazhong University of Science and Technology](https://www.hust.edu.cn/), majoring in Engineering Mechanics. My academic and research interests span various cutting-edge fields, including computer vision, machine learning, robotics, and unmanned aerial vehicles (UAVs).
 
