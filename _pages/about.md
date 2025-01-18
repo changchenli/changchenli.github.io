@@ -1,3 +1,5 @@
+Welcome to my personal website. Here, you can explore my educational background, honors, curriculum vitae, and personal interests etc.
+
 ---
 permalink: /
 title: "About me"
@@ -7,9 +9,10 @@ redirect_from:
   - /about.html
 ---
 
-I'm a junior from [School of Aerospace Engineering](https://ae.hust.edu.cn/), [Huazhong University of Science and Technology](https://www.hust.edu.cn/).I major in Engineering Mechanics. My research interest includes computer vision, machine learning, robots and UAV.
+
+I am currently a junior student at the[School of Aerospace Engineering](https://ae.hust.edu.cn/), [Huazhong University of Science and Technology](https://www.hust.edu.cn/), majoring in Engineering Mechanics. My academic and research interests span various cutting-edge fields, including computer vision, machine learning, robotics, and unmanned aerial vehicles (UAVs).
 
 You can find my CV here: [Changchen Li's Curriculum Vitae](../assets/Curriculum_Vitae.pdf).
 
-[Email](mailto:changchen_li@hust.edu.cn) / [Github](https://github.com/changchenli) / [Wechat](../images/wechat.jpg)
+If you would like to connect with me, feel free to reach out through the following platforms:[Email](mailto:changchen_li@hust.edu.cn) / [Github](https://github.com/changchenli) / [Wechat](../images/wechat.jpg)
 
