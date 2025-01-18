@@ -1,5 +1,5 @@
 ---
-title: ""Challenge Cup" National College Student Curricular Academic Science and Technology Works Competition"
+title: "Challenge Cup" National College Student Curricular Academic Science and Technology Works Competition"
 collection: teaching
 type: "program"
 permalink: /teaching/Undergraduate-Training-Program
