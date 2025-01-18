@@ -1,9 +1,9 @@
 ---
 title: "Undergraduate Training Program for Innovation and Entrepreneurship（National）"
 collection: teaching
-type: "Undergraduate course"
+type: "program"
 permalink: /teaching/Undergraduate-Training-Program
-venue: "University 1, Department"
+venue: "Huazhong University of Science and Technology, Aerospace Engineering"
 date: 2024-03-10 --- 2026-03-30
 location: "Wuhan, China"
 ---
