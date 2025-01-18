@@ -1,8 +1,8 @@
 ---
 title: "Undergraduate Training Program for Innovation and Entrepreneurship（National）"
-collection: p_and_c
+collection: teaching
 type: "Undergraduate course"
-permalink: /p_and_c/Undergraduate-Training-Program
+permalink: /teaching/Undergraduate-Training-Program
 venue: "University 1, Department"
 date: 2024-03-10 --- 2026-03-30
 location: "Wuhan, China"
