@@ -8,7 +8,7 @@ date: 2024-03-10 --- 2026-03-30
 location: "Wuhan, China"
 ---
 
-
+This program aims to build an unmanned aerial vehicle which can operate in both air and water safely.
 
 Heading 1
 ======
