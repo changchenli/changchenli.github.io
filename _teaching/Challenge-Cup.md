@@ -1,9 +1,9 @@
 ---
 title: "'Challenge Cup' National College Student Curricular Academic Science and Technology Works Competition"
 collection: teaching
-type: "competition"
+type: "national competition"
 permalink: /teaching/Undergraduate-Training-Program
-venue: "Huazhong University of Science and Technology, Aerospace Engineering"
+venue: "National First Prize"
 date: 2024-03-10 --- 2026-03-30
 location: "Wuhan, China"
 ---
