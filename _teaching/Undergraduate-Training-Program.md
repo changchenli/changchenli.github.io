@@ -1,14 +1,14 @@
 ---
 title: "Undergraduate Training Program for Innovation and Entrepreneurship"
 collection: teaching
-type: "National program"
+type: "Team leader"
 permalink: /teaching/Undergraduate-Training-Program
-venue: "Huazhong University of Science and Technology, Aerospace Engineering"
+venue: "National program"
 date: 2024-03-10 --- 2026-03-30
 location: "Wuhan, China"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+
 
 Heading 1
 ======
