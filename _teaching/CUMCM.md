@@ -1,7 +1,7 @@
 ---
 title: "China Undergraduate Mathematical Contest in Modelling（CUMCM）"
 collection: teaching
-type: "National competition"
+type: "Team leader"
 permalink: /teaching/CUMCM
 venue: "Provincial Third Prize"
 date: 2024-03-10 --- 2026-03-30
