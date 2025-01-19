@@ -1,7 +1,7 @@
 ---
 title: "'Challenge Cup' National College Student Curricular Academic Science and Technology Works Competition"
 collection: teaching
-type: "national competition"
+type: "Deputy leader"
 permalink: /teaching/Challenge-Cup
 venue: "National First Prize"
 date: 2024-03-10 --- 2026-03-30
