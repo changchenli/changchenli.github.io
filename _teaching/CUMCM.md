@@ -8,7 +8,7 @@ date: 2024-03-10 --- 2026-03-30
 location: "Wuhan, China"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+The competition aims to build simplified mathematical models for a wide variety of real-world scenarios in order to simulate or calculate scenarios that may arise in a variety of scenarios
 
 Heading 1
 ======
