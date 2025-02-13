@@ -10,11 +10,11 @@ location: "Wuhan, China"
 
 This program aims to build an unmanned aerial vehicle which can operate in both air and water safely.
 
-Heading 1
+Establishment of digital models
 ======
 
-Heading 2
+Functions and iterations of real-world prototypes
 ======
 
-Heading 3
+Flight control algorithms
 ======
