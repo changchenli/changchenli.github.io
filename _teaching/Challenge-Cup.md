@@ -8,7 +8,7 @@ date: 2024-03-10 --- 2026-03-30
 location: "Beijing, China"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+In this competition, we simulated the scene of drone rescue at sea, and realized the organic combination of flight control code and visual recognition algorithm
 
 Heading 1
 ======
