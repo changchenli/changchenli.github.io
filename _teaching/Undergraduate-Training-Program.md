@@ -12,10 +12,12 @@ This program aims to build an unmanned aerial vehicle which can operate in both 
 
 Establishment of digital models
 ======
-abcd
+我们在电脑上建立了原型机的三维模型。主要用于
 
 Functions and iterations of real-world prototypes
 ======
 
+
 Flight control algorithms
 ======
+
