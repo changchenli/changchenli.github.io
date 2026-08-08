@@ -21,14 +21,14 @@ repository               : "changchenli/changchenli.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "self_picture.png"
+  avatar           : "self_picture.jpg"
   name             : "Changchen Li"
   pronouns         : # example: "she/her"  
   bio              : "M.Sc. Robotics student at NUS. Interested in embodied AI, robot learning, and computer vision."
   location         : "Singapore"
   employer         : "National University of Singapore"
   uri              : # URL
-  email            : 
+  email            : "lichangchen50@gmail.com" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
