@@ -20,10 +20,13 @@ systems that can perceive, learn, and interact with the physical world.
 
 ## Research Interests & Resources
 
-- **Robot Learning** — learning adaptable robot behaviors from data and interaction.
-- **Embodied AI** — connecting perception, reasoning, and action in physical environments.
-- **Computer Vision** — enabling intelligent systems to understand visual information.
-- **Multimodal Representation Learning** — connecting language, vision, and physical signals.
+- **Robot Learning**
+- **Embodied AI**
+- **Computer Vision**
+- **Multimodal Learning**
+
+You are welcome to follow the links below to learn more about my work,
+academic background, and project experience.
 
 **Explore:** [Education](/education/) · [Experience](/experience/) ·
 [Curriculum Vitae](/assets/Curriculum_Vitae.pdf) ·
