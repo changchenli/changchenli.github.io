@@ -1,19 +1,25 @@
 ---
 permalink: /
-title: "HOMEPAGE"
+title: "Welcome"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
-Welcome to my personal website. Here, you can explore my educational background, honors, curriculum vitae, and personal interests etc.
 
-About me
---------
-I am currently a junior student at the[School of Aerospace Engineering](https://ae.hust.edu.cn/), [Huazhong University of Science and Technology](https://www.hust.edu.cn/), majoring in Engineering Mechanics. My academic and research interests span various cutting-edge fields, including computer vision, machine learning, robotics, and unmanned aerial vehicles (UAVs).
+I am **Changchen Li**, an M.Sc. student in Robotics at the
+[National University of Singapore](https://cde.nus.edu.sg/). Before joining NUS,
+I studied Engineering Mechanics at
+[Huazhong University of Science and Technology](https://www.hust.edu.cn/).
 
-You can go to a dedicated tab to find my CV or directly download it here: [Changchen Li's Curriculum Vitae](../assets/Curriculum_Vitae.pdf).
+My interests lie at the intersection of **robot learning, embodied AI, computer
+vision, and multimodal representation learning**. I am especially interested in
+building intelligent systems that can perceive, reason, and interact with the
+physical world.
 
-If you would like to connect with me, feel free to reach out through the following platforms:  
-[Email](mailto:changchen_li@hust.edu.cn) / [Github](https://github.com/changchenli) / [Wechat](../images/wechat.jpg)
+## Explore
 
+- [Education](/education/) - my academic background
+- [Experience](/experience/) - competitions, projects, and industry experience
+- [Curriculum Vitae](/assets/Curriculum_Vitae.pdf) - view my CV
+- [GitHub](https://github.com/changchenli) - code and future research projects
