@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am **Changchen Li**, an M.Sc. student in Robotics at the
+I am **Li Changchen**, an M.Sc. student in Robotics at the
 [National University of Singapore](https://cde.nus.edu.sg/). Before joining NUS,
 I studied Engineering Mechanics at
 [Huazhong University of Science and Technology](https://www.hust.edu.cn/).
@@ -20,6 +20,6 @@ physical world.
 ## Explore
 
 - [Education](/education/) - my academic background
-- [Experience](/experience/) - competitions, projects, and industry experience
+- [Experience](/experience/) - details in competitions, projects, and industry experience
 - [Curriculum Vitae](/assets/Curriculum_Vitae.pdf) - view my CV
 - [GitHub](https://github.com/changchenli) - code and future research projects
