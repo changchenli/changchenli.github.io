@@ -10,44 +10,21 @@ redirect_from:
 I am **Changchen Li**, a robotics student interested in building intelligent
 systems that can perceive, learn, and interact with the physical world.
 
-## Current Position
+## Education
 
-- **Degree:** M.Sc. in Robotics
-- **Institution:** [National University of Singapore](https://cde.nus.edu.sg/)
-- **College:** College of Design and Engineering
-- **Location:** Singapore
+- **National University of Singapore** — M.Sc. in Robotics  
+  College of Design and Engineering · 2026-Present · Singapore
 
-## Academic Background
+- **Huazhong University of Science and Technology** — B.Eng. in Engineering Mechanics  
+  School of Aerospace Engineering · 2022-2026 · Wuhan, China
 
-- **Degree:** B.Eng. in Engineering Mechanics
-- **Institution:** [Huazhong University of Science and Technology](https://www.hust.edu.cn/)
-- **School:** School of Aerospace Engineering
-- **Graduation:** 2026
+## Research Interests & Resources
 
-## Research Interests
+- **Robot Learning** — learning adaptable robot behaviors from data and interaction.
+- **Embodied AI** — connecting perception, reasoning, and action in physical environments.
+- **Computer Vision** — enabling intelligent systems to understand visual information.
+- **Multimodal Representation Learning** — connecting language, vision, and physical signals.
 
-- **Robot Learning**  
-  Learning adaptable robot behaviors from data and interaction.
-
-- **Embodied AI**  
-  Connecting perception, reasoning, and action in physical environments.
-
-- **Computer Vision**  
-  Enabling intelligent systems to understand visual information.
-
-- **Multimodal Representation Learning**  
-  Connecting language, vision, and physical signals in shared representations.
-
-## Explore
-
-- [Education](/education/)  
-  Academic background, coursework, GPA, and honors.
-
-- [Experience](/experience/)  
-  Competitions, engineering projects, and industry experience.
-
-- [Curriculum Vitae](/assets/Curriculum_Vitae.pdf)  
-  Complete academic and technical résumé.
-
-- [GitHub](https://github.com/changchenli)  
-  Code and future research projects.
+**Explore:** [Education](/education/) · [Experience](/experience/) ·
+[Curriculum Vitae](/assets/Curriculum_Vitae.pdf) ·
+[GitHub](https://github.com/changchenli)
