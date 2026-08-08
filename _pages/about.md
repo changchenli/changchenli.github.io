@@ -9,6 +9,21 @@ redirect_from:
 ---
 
 <style>
+.page {
+  float: none !important;
+  width: 100% !important;
+  padding-left: 4vw !important;
+  padding-right: 4vw !important;
+}
+.page__inner-wrap,
+.page__content {
+  float: none !important;
+  width: 100% !important;
+}
+.page__inner-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
 .home-shell {
   --home-ink: #1f2933;
   --home-muted: #65717d;
@@ -22,9 +37,9 @@ redirect_from:
 .home-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 260px;
-  gap: clamp(2rem, 7vw, 6rem);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
   align-items: center;
-  padding: clamp(2rem, 5vw, 4.5rem);
+  padding: clamp(1.5rem, 3.5vw, 3.5rem);
   border: 1px solid var(--home-line);
   border-radius: 18px;
   background: linear-gradient(135deg, #fff 0%, var(--home-soft) 100%);
