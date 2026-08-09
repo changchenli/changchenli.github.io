@@ -28,6 +28,8 @@ The dragon specified in the problem consists of **223 benches**: one head bench,
 
 The dragon moves clockwise inward along an Archimedean spiral with a pitch of **55 cm**, with the center of every handle constrained to the spiral. The front handle of the head moves at a constant speed of **1 m/s**, starting from point A on the **16th turn**. The task is to calculate the position and velocity of every handle once per second from **0 to 300 s** and save the full results in `result1.xlsx`. The positions and velocities at **0, 60, 120, 180, 240, and 300 s** are also reported for the head, body sections **1, 51, 101, 151, and 201**, and the rear handle of the tail.
 
+![Figure 4. Schematic of the inward spiral]({{ "/images/cumcm-figure-4-inward-spiral-en.png" | relative_url }})
+
 **Current modules**
 
 - `位置输出.py` - propagates handle positions and exports `result1.xlsx`
@@ -47,6 +49,8 @@ Using the same inward spiral and motion conditions as Problem 1, determine the l
 ### Problem 3 - Minimum Feasible Spiral Pitch
 
 The dragon must transition from clockwise inward motion to counterclockwise outward motion inside a circular turning region centered at the spiral origin. The region has a diameter of **9 m**. The task is to determine the minimum spiral pitch that allows the front handle of the head to reach the boundary of this turning region without violating the motion constraints.
+
+![Figure 5. Schematic of the turning region]({{ "/images/cumcm-figure-5-turning-region-en.png" | relative_url }})
 
 **Current modules**
 
