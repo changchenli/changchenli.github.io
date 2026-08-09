@@ -28,7 +28,15 @@ The dragon specified in the problem consists of **223 benches**: one head bench,
 
 The dragon moves clockwise inward along an Archimedean spiral with a pitch of **55 cm**, with the center of every handle constrained to the spiral. The front handle of the head moves at a constant speed of **1 m/s**, starting from point A on the **16th turn**. The task is to calculate the position and velocity of every handle once per second from **0 to 300 s**. The positions and velocities at **0, 60, 120, 180, 240, and 300 s** are also reported for the head, body sections **1, 51, 101, 151, and 201**, and the rear handle of the tail.
 
-![Figure 4. Schematic of the inward spiral]({{ "/images/cumcm-figure-4-inward-spiral-en.png" | relative_url }})
+<div style="display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap; margin: 1rem 0;">
+  <figure style="flex: 1 1 320px; min-width: 0; margin: 0;">
+    <img src="{{ '/images/cumcm-figure-4-inward-spiral-en.png' | relative_url }}" alt="Figure 4. Schematic of the inward spiral">
+  </figure>
+  <figure style="flex: 1 1 320px; min-width: 0; margin: 0;">
+    <img src="{{ '/images/cumcm-problem1-position-animation.gif' | relative_url }}" alt="Animated position evolution of the Bench Dragon from 0 to 300 seconds">
+    <figcaption style="text-align: center;">Position evolution from 0 to 300 s (10 s sampling)</figcaption>
+  </figure>
+</div>
 
 ### Problem 2 - Collision-Limited Termination Time
 
@@ -49,18 +57,5 @@ The front handle of the head moves at **1 m/s**. Positions and velocities for th
 ### Problem 5 - Maximum Admissible Head Speed
 
 Following the path defined in Problem 4, determine the maximum constant speed of the head such that the speed of **every handle remains at or below 2 m/s** throughout the motion.
-
-## Results and Visualizations
-
-The existing project files already contain:
-
-- full position and velocity tables for the required time points;
-- collision-limited terminal-state results;
-- pitch-search convergence analysis;
-- inward, turning, and outward trajectory plots;
-- frame-by-frame configuration visualizations;
-- final Excel outputs for Problems 1, 2, and 4.
-
-This section will next be expanded into a curated results gallery with short explanations instead of publishing every intermediate file.
 
 [Back to Experience]({{ "/experience/" | relative_url }})
