@@ -30,21 +30,9 @@ The dragon moves clockwise inward along an Archimedean spiral with a pitch of **
 
 ![Figure 4. Schematic of the inward spiral]({{ "/images/cumcm-figure-4-inward-spiral-en.png" | relative_url }})
 
-**Current modules**
-
-- `位置输出.py` - propagates handle positions and exports `result1.xlsx`
-- `速度输出.py` - calculates the velocity of each handle
-- `移动可视化.py` - visualizes the time-varying configuration
-
 ### Problem 2 - Collision-Limited Termination Time
 
 Using the same inward spiral and motion conditions as Problem 1, determine the latest time at which the dragon can continue moving without any benches colliding. The complete position and velocity state at this limiting instant is saved in `result2.xlsx`. The same representative handles - the head, body sections **1, 51, 101, 151, and 201**, and the rear handle of the tail - are reported separately.
-
-**Current modules**
-
-- `终止时刻判断.py` - performs collision detection and determines the stopping time
-- `终止时刻位置记录.py` - exports positions at the limiting state
-- `终止时刻速度记录.py` - exports velocities at the limiting state
 
 ### Problem 3 - Minimum Feasible Spiral Pitch
 
@@ -52,43 +40,15 @@ The dragon must transition from clockwise inward motion to counterclockwise outw
 
 ![Figure 5. Schematic of the turning region]({{ "/images/cumcm-figure-5-turning-region-en.png" | relative_url }})
 
-**Current modules**
-
-- `寻找最佳螺距.py` - iteratively searches for a feasible pitch
-- `测试不同螺距下模型灵敏度.py` - evaluates sensitivity and convergence
-- `不同螺距的收敛所需时间和次数.png` - summarizes the convergence behavior
-
 ### Problem 4 - S-Shaped Turning Path
 
 The inward spiral has a pitch of **1.7 m**, and the outward spiral is centrally symmetric to it about the spiral origin. Inside the **9 m-diameter** turning region, the dragon follows an S-shaped path formed by two tangent circular arcs. The radius of the first arc is **twice** that of the second, and both arcs must remain tangent to the relevant spirals. The task also asks whether the arcs can be adjusted to shorten the turning path while preserving tangency.
 
 The front handle of the head moves at **1 m/s**. Positions and velocities for the complete dragon are calculated once per second from **-100 to 100 s** and saved in `result4.xlsx`. Representative results are reported at **-100, -50, 0, 50, and 100 s**.
 
-**Current modules**
-
-- `几何相切路径绘制.py` - constructs the tangent-arc geometry
-- `龙头转弯路径绘制.py` - visualizes the head trajectory
-- `-100--0s位置输出.py` and `0--100s位置输出.py` - export positions before and after the turning instant
-- `-100--0速度输出.py` and `0--100s速度输出.py` - export the corresponding velocities
-
 ### Problem 5 - Maximum Admissible Head Speed
 
 Following the path defined in Problem 4, determine the maximum constant speed of the head such that the speed of **every handle remains at or below 2 m/s** throughout the motion.
-
-**Current module**
-
-- `确定最大行进速度.py` - tests the speed constraint across the full articulated system
-
-## Code Architecture
-
-| Layer | Responsibility | Planned presentation |
-| --- | --- | --- |
-| Geometry | Spiral, circular-arc, and fixed-distance relations | Equations and diagrams |
-| State propagation | Sequential solution of all handle positions | Annotated Python functions |
-| Kinematics | Time stepping and velocity estimation | Numerical-method explanation |
-| Constraints | Collision and maximum-speed checks | Visual validation examples |
-| Optimization | Pitch and speed parameter search | Convergence plots |
-| Output | Excel results and trajectory figures | Downloadable data and gallery |
 
 ## Results and Visualizations
 
@@ -102,14 +62,5 @@ The existing project files already contain:
 - final Excel outputs for Problems 1, 2, and 4.
 
 This section will next be expanded into a curated results gallery with short explanations instead of publishing every intermediate file.
-
-## Planned Additions
-
-- Selected source code with line-by-line explanations
-- Mathematical derivation of the position-propagation model
-- Collision-detection diagram
-- Interactive or animated trajectory visualization
-- Key result tables and convergence plots
-- Paper, code, and data download links
 
 [Back to Experience]({{ "/experience/" | relative_url }})
