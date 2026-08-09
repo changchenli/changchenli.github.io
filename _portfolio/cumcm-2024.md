@@ -22,25 +22,11 @@ The dragon specified in the problem consists of **223 benches**: one head bench,
 
 ![English geometry and connection diagrams for the Bench Dragon]({{ "/images/cumcm-bench-dragon-geometry-en.png" | relative_url }})
 
-The main numerical conditions include an inward spiral with a pitch of **55 cm**, a prescribed head speed of **1 m/s**, and a simulation interval from **0 to 300 s**. The turning region is a circle with a diameter of **9 m**. For the turning-path problem, the inward spiral has a pitch of **1.7 m**, and the complete motion is evaluated from **-100 to 100 s**. In the final speed-optimization task, the speed of every handle must remain below **2 m/s**.
-
-## Modeling Approach
-
-The solution was organized as a numerical pipeline:
-
-1. Represent the inward and outward paths with Archimedean spirals.
-2. Propagate the position of each handle from the dragon head through fixed-distance geometric constraints.
-3. Solve nonlinear position equations numerically with `scipy.optimize.fsolve`.
-4. Estimate velocities from consecutive time steps.
-5. Detect geometric collision between bench sections.
-6. Search for feasible pitch, turning-path, and speed parameters.
-7. Export full position and velocity histories to Excel for validation.
-
 ## Problem Breakdown
 
 ### Problem 1 - Position and Velocity Along the Inward Spiral
 
-Compute the position and velocity of the complete dragon from 0 to 300 seconds while the head moves at 1 m/s along a 55 cm-pitch spiral.
+The dragon moves clockwise inward along an Archimedean spiral with a pitch of **55 cm**, with the center of every handle constrained to the spiral. The front handle of the head moves at a constant speed of **1 m/s**, starting from point A on the **16th turn**. The task is to calculate the position and velocity of every handle once per second from **0 to 300 s** and save the full results in `result1.xlsx`. The positions and velocities at **0, 60, 120, 180, 240, and 300 s** are also reported for the head, body sections **1, 51, 101, 151, and 201**, and the rear handle of the tail.
 
 **Current modules**
 
@@ -50,7 +36,7 @@ Compute the position and velocity of the complete dragon from 0 to 300 seconds w
 
 ### Problem 2 - Collision-Limited Termination Time
 
-Determine the latest time at which the dragon can continue moving inward without collision, and record the full state at that instant.
+Using the same inward spiral and motion conditions as Problem 1, determine the latest time at which the dragon can continue moving without any benches colliding. The complete position and velocity state at this limiting instant is saved in `result2.xlsx`. The same representative handles - the head, body sections **1, 51, 101, 151, and 201**, and the rear handle of the tail - are reported separately.
 
 **Current modules**
 
@@ -60,7 +46,7 @@ Determine the latest time at which the dragon can continue moving inward without
 
 ### Problem 3 - Minimum Feasible Spiral Pitch
 
-Search for the minimum spiral pitch that allows the head to reach the boundary of the 9 m-diameter turning region.
+The dragon must transition from clockwise inward motion to counterclockwise outward motion inside a circular turning region centered at the spiral origin. The region has a diameter of **9 m**. The task is to determine the minimum spiral pitch that allows the front handle of the head to reach the boundary of this turning region without violating the motion constraints.
 
 **Current modules**
 
@@ -70,7 +56,9 @@ Search for the minimum spiral pitch that allows the head to reach the boundary o
 
 ### Problem 4 - S-Shaped Turning Path
 
-Construct a shorter S-shaped turning path from two tangent circular arcs, connect it smoothly to the inward and outward spirals, and simulate the complete dragon from -100 to 100 seconds.
+The inward spiral has a pitch of **1.7 m**, and the outward spiral is centrally symmetric to it about the spiral origin. Inside the **9 m-diameter** turning region, the dragon follows an S-shaped path formed by two tangent circular arcs. The radius of the first arc is **twice** that of the second, and both arcs must remain tangent to the relevant spirals. The task also asks whether the arcs can be adjusted to shorten the turning path while preserving tangency.
+
+The front handle of the head moves at **1 m/s**. Positions and velocities for the complete dragon are calculated once per second from **-100 to 100 s** and saved in `result4.xlsx`. Representative results are reported at **-100, -50, 0, 50, and 100 s**.
 
 **Current modules**
 
@@ -81,7 +69,7 @@ Construct a shorter S-shaped turning path from two tangent circular arcs, connec
 
 ### Problem 5 - Maximum Admissible Head Speed
 
-Determine the maximum constant head speed such that the speed of every handle remains below 2 m/s.
+Following the path defined in Problem 4, determine the maximum constant speed of the head such that the speed of **every handle remains at or below 2 m/s** throughout the motion.
 
 **Current module**
 
