@@ -98,7 +98,14 @@ Using the same inward spiral and motion conditions as Problem 1, determine the l
 
 The dragon must transition from clockwise inward motion to counterclockwise outward motion inside a circular turning region centered at the spiral origin. The region has a diameter of **9 m**. The task is to determine the minimum spiral pitch that allows the front handle of the head to reach the boundary of this turning region without violating the motion constraints.
 
-![Figure 5. Schematic of the turning region]({{ "/images/cumcm-figure-5-turning-region-en.png" | relative_url }})
+<div style="display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap; margin: 1rem 0;">
+  <figure style="flex: 1 1 320px; min-width: 0; margin: 0;">
+    <img src="{{ '/images/cumcm-figure-5-turning-region-en.png' | relative_url }}" alt="Figure 5. Schematic of the turning region">
+  </figure>
+  <figure style="flex: 1 1 320px; min-width: 0; margin: 0;">
+    <img src="{{ '/images/cumcm-figure-5-route-result.png' | relative_url }}" alt="Simulated Bench Dragon configuration inside the turning region">
+  </figure>
+</div>
 
 ### Problem 4 - S-Shaped Turning Path
 
