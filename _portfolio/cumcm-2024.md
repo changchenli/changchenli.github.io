@@ -9,7 +9,7 @@ toc_sticky: true
 
 *Team Leader · Provincial Third Prize · 2024*
 
-This page presents the structure of our solution to Problem A, **"Bench Dragon"**, in the 2024 China Undergraduate Mathematical Contest in Modeling. Detailed code walkthroughs, figures, and downloadable results will be added progressively.
+This page presents the structure of our solution to Problem A, **"Bench Dragon"**, in the 2024 China Undergraduate Mathematical Contest in Modeling. Detailed code walkthroughs, figures, and downloadable results will be added progressively. For the implementation code, please visit my [GitHub](https://github.com/changchenli).
 
 ## Project Overview
 
