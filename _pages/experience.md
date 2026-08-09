@@ -31,7 +31,7 @@ author_profile: true
 
 ## Projects
 
-### Intelligent Flight System and Foldable Composite Wing
+### Structural and Mechanical Performance of a Trans-Medium Aircraft
 *Team Leader · National-Level Innovation Project · 2024-2026*
 
 - Led intelligent flight-system design and composite impact analysis.
