@@ -103,7 +103,7 @@ The dragon must transition from clockwise inward motion to counterclockwise outw
     <img src="{{ '/images/cumcm-figure-5-turning-region-en.png' | relative_url }}" alt="Figure 5. Schematic of the turning region">
   </figure>
   <figure style="flex: 1 1 320px; min-width: 0; margin: 0;">
-    <img src="{{ '/images/cumcm-figure-5-route-result.png' | relative_url }}" alt="Simulated Bench Dragon configuration inside the turning region">
+    <img src="{{ '/images/cumcm-figure-5-route-result-full.png' | relative_url }}" alt="Simulated Bench Dragon configuration inside the turning region">
   </figure>
 </div>
 
