@@ -26,13 +26,13 @@ The dragon specified in the problem consists of **223 benches**: one head bench,
 
 ### Problem 1 - Position and Velocity Along the Inward Spiral
 
-The dragon moves clockwise inward along an Archimedean spiral with a pitch of **55 cm**, with the center of every handle constrained to the spiral. The front handle of the head moves at a constant speed of **1 m/s**, starting from point A on the **16th turn**. The task is to calculate the position and velocity of every handle once per second from **0 to 300 s** and save the full results in `result1.xlsx`. The positions and velocities at **0, 60, 120, 180, 240, and 300 s** are also reported for the head, body sections **1, 51, 101, 151, and 201**, and the rear handle of the tail.
+The dragon moves clockwise inward along an Archimedean spiral with a pitch of **55 cm**, with the center of every handle constrained to the spiral. The front handle of the head moves at a constant speed of **1 m/s**, starting from point A on the **16th turn**. The task is to calculate the position and velocity of every handle once per second from **0 to 300 s**. The positions and velocities at **0, 60, 120, 180, 240, and 300 s** are also reported for the head, body sections **1, 51, 101, 151, and 201**, and the rear handle of the tail.
 
 ![Figure 4. Schematic of the inward spiral]({{ "/images/cumcm-figure-4-inward-spiral-en.png" | relative_url }})
 
 ### Problem 2 - Collision-Limited Termination Time
 
-Using the same inward spiral and motion conditions as Problem 1, determine the latest time at which the dragon can continue moving without any benches colliding. The complete position and velocity state at this limiting instant is saved in `result2.xlsx`. The same representative handles - the head, body sections **1, 51, 101, 151, and 201**, and the rear handle of the tail - are reported separately.
+Using the same inward spiral and motion conditions as Problem 1, determine the latest time at which the dragon can continue moving without any benches colliding. The same representative handles - the head, body sections **1, 51, 101, 151, and 201**, and the rear handle of the tail - are reported separately.
 
 ### Problem 3 - Minimum Feasible Spiral Pitch
 
@@ -44,7 +44,7 @@ The dragon must transition from clockwise inward motion to counterclockwise outw
 
 The inward spiral has a pitch of **1.7 m**, and the outward spiral is centrally symmetric to it about the spiral origin. Inside the **9 m-diameter** turning region, the dragon follows an S-shaped path formed by two tangent circular arcs. The radius of the first arc is **twice** that of the second, and both arcs must remain tangent to the relevant spirals. The task also asks whether the arcs can be adjusted to shorten the turning path while preserving tangency.
 
-The front handle of the head moves at **1 m/s**. Positions and velocities for the complete dragon are calculated once per second from **-100 to 100 s** and saved in `result4.xlsx`. Representative results are reported at **-100, -50, 0, 50, and 100 s**.
+The front handle of the head moves at **1 m/s**. Positions and velocities for the complete dragon are calculated once per second from **-100 to 100 s**. Representative results are reported at **-100, -50, 0, 50, and 100 s**.
 
 ### Problem 5 - Maximum Admissible Head Speed
 
