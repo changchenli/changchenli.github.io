@@ -23,7 +23,7 @@ author_profile: true
 - Built a SIFT-based feature-matching pipeline with **95% localization accuracy**.
 - Reduced average processing time per image by approximately **67%**.
 
-### China Undergraduate Mathematical Contest in Modeling
+### [China Undergraduate Mathematical Contest in Modeling]({{ "/portfolio/cumcm-2024/" | relative_url }})
 *Team Leader · Provincial Third Prize · 2024*
 
 - Modeled the dynamics of a snake coiling along a spiral using nodal physics.
