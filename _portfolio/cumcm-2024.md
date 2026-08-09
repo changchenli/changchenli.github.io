@@ -15,14 +15,14 @@ This page presents the structure of our solution to Problem A, **"Bench Dragon"*
 
 | Item | Details |
 | --- | --- |
-| Competition | China Undergraduate Mathematical Contest in Modeling |
-| Problem | 2024 Problem A - "Bench Dragon" |
-| Role | Team Leader |
-| Award | Provincial Third Prize |
 | Main tools | Python, NumPy, SciPy, Pandas, Matplotlib |
 | Core topics | Kinematic modeling, nonlinear equations, collision detection, path design, and constrained optimization |
 
-The problem considers a 223-section bench dragon moving along spiral and turning paths. Our objective was to describe the position and velocity of every handle while satisfying rigid geometric, collision, turning-space, and speed constraints.
+The **Bench Dragon**, also known as *Panlong*, is a traditional folk performance found in Zhejiang and Fujian. In the performance, dozens or even hundreds of benches are connected end to end to form a long, winding dragon. The head leads while the body and tail follow in a coiling motion, eventually forming a disk-like pattern. Provided that the team can coil inward and outward freely, a smaller occupied area and a higher traveling speed generally make the performance more impressive.
+
+The dragon specified in the problem consists of **223 benches**: one head bench, **221 body benches**, and one tail bench. The head bench is **341 cm** long, while every body and tail bench is **220 cm** long; all benches are **30 cm** wide. Each bench contains two circular holes with a diameter of **5.5 cm**, and the center of each hole is **27.5 cm** from the nearest end of the bench. Adjacent benches are joined by handles passing through these holes, forming an articulated chain.
+
+The main numerical conditions include an inward spiral with a pitch of **55 cm**, a prescribed head speed of **1 m/s**, and a simulation interval from **0 to 300 s**. The turning region is a circle with a diameter of **9 m**. For the turning-path problem, the inward spiral has a pitch of **1.7 m**, and the complete motion is evaluated from **-100 to 100 s**. In the final speed-optimization task, the speed of every handle must remain below **2 m/s**.
 
 ## Modeling Approach
 
