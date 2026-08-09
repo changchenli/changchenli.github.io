@@ -1,5 +1,5 @@
 ---
-title: "Undergraduate Training Program for Innovation and Entrepreneurship"
+title: "Structural and Mechanical Performance of a Trans-Medium Aircraft"
 collection: teaching
 type: "Team leader"
 permalink: /teaching/Undergraduate-Training-Program
