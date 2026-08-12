@@ -31,24 +31,16 @@ Air rewards low mass and large lifting surfaces. Water, with far greater density
 The project addresses this conflict through a servo-driven folding-wing architecture. The wings remain fully deployed during atmospheric flight, then rotate rearward alongside the fuselage before water entry and underwater travel. The project is organized around two main engineering workstreams: **SolidWorks system design** and **flow-field simulation**.
 
 <div class="aircraft-project__principles">
-  <article><span>01</span><h3>Lightweight</h3><p>Modular construction and high specific stiffness for efficient flight.</p></article>
-  <article><span>02</span><h3>Watertight</h3><p>A sealed electronics bay and protected interfaces for submerged operation.</p></article>
-  <article><span>03</span><h3>Low Drag</h3><p>Lift-generating geometry in air and reduced projected area underwater.</p></article>
-  <article><span>04</span><h3>Impact Ready</h3><p>Load paths designed around the short, severe water-entry event.</p></article>
+  <article><span>01 / STRUCTURE</span><h3>Lightweight Modular Airframe</h3><p>A high-specific-stiffness fuselage integrates the wing, tail, propulsion system, and sealed electronics bay through serviceable module interfaces.</p></article>
+  <article><span>02 / INTEGRATION</span><h3>Watertight System Integration</h3><p>Protected interfaces and an isolated electronics compartment support reliable operation across atmospheric and submerged conditions.</p></article>
+  <article><span>03 / TRANSFORMATION</span><h3>Foldable-Wing Mechanism</h3><p>A servo-driven linkage deploys the wing for lift in air and folds it rearward to reduce frontal area and impact loading in water.</p></article>
+  <article><span>04 / VALIDATION</span><h3>Cross-Medium Performance Validation</h3><p>Structural response, aerodynamic lift, flow distribution, and water-entry loads are evaluated together to guide design iteration.</p></article>
 </div>
 
 ## 01 · SolidWorks Model
 
 The CAD model separates the aircraft into coordinated fuselage, foldable-wing, tail-control, and propulsion modules. The transformation mechanism is concentrated at the wing root, using a direct transmission path from the servo to the crank arm, linkage, and rotating wing assembly.
 
-### Mechanical Architecture
-
-<div class="aircraft-project__modules">
-  <article><span>01 / FUSELAGE</span><h3>Primary structure</h3><p>Provides the main load path and mounting interfaces for the wing, tail, propulsion system, and sealed electronics bay.</p></article>
-  <article><span>02 / WING</span><h3>Adaptive lift surface</h3><p>Deploys for atmospheric lift and folds rearward to reduce the underwater frontal area.</p></article>
-  <article><span>03 / TAIL</span><h3>Directional control</h3><p>Compact horizontal and vertical surfaces support attitude control across both media.</p></article>
-  <article><span>04 / ACTUATION</span><h3>Transformation mechanism</h3><p>A servo-driven linkage provides a compact and serviceable folding-wing motion path.</p></article>
-</div>
 
 <div class="aircraft-project__sequence">
   <div><span>01</span><strong>System layout</strong><p>Define the airframe modules, interfaces, and available installation volume.</p></div>
