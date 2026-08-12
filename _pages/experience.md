@@ -31,7 +31,7 @@ author_profile: true
 
 ## Projects
 
-### Structural and Mechanical Performance of a Trans-Medium Aircraft
+### [Structural and Mechanical Performance of a Trans-Medium Aircraft]({{ "/teaching/Undergraduate-Training-Program/" | relative_url }})
 *Team Leader · National-Level Innovation Project · 2024-2026*
 
 - Led intelligent flight-system design and composite impact analysis.
