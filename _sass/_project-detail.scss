@@ -97,7 +97,7 @@
 
   &__sequence {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1px;
     margin: 2rem 0 4rem;
     border: 1px solid var(--aircraft-line);
@@ -174,7 +174,8 @@
 
   @media (max-width: 64em) {
     &__facts,
-    &__principles {
+    &__principles,
+    &__sequence {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
