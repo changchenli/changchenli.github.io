@@ -17,11 +17,6 @@ comments: false
 
 <p class="aircraft-project__lead">A foldable-wing aircraft developed to operate across air and water, where aerodynamic efficiency, underwater drag, water-entry impact, sealing, and structural reliability must be considered as one system.</p>
 
-<figure class="aircraft-project__hero">
-  <img src="{{ '/images/trans-medium-aircraft/cad-hero.png' | relative_url }}" alt="SolidWorks system assembly of the trans-medium aircraft">
-  <figcaption>System assembly · SolidWorks</figcaption>
-</figure>
-
 <div class="aircraft-project__facts">
   <div><span>ROLE</span><strong>Team Leader<br>Structural Design</strong></div>
   <div><span>PERIOD</span><strong>2024–2026<br>National Program</strong></div>
@@ -33,7 +28,7 @@ comments: false
 
 Air rewards low mass and large lifting surfaces. Water, with far greater density and viscosity, demands a compact external shape, sealed electronics, and resistance to severe transient loads. A fixed geometry therefore creates conflicting requirements across the two operating media.
 
-The project addresses this conflict through a servo-driven folding-wing architecture. The wings remain fully deployed during atmospheric flight, then rotate rearward alongside the fuselage before water entry and underwater travel. The current project page is organized around the two main engineering workstreams: **SolidWorks system design** and **flow-field simulation**.
+The project addresses this conflict through a servo-driven folding-wing architecture. The wings remain fully deployed during atmospheric flight, then rotate rearward alongside the fuselage before water entry and underwater travel. The project is organized around two main engineering workstreams: **SolidWorks system design** and **flow-field simulation**.
 
 <div class="aircraft-project__principles">
   <article><span>01</span><h3>Lightweight</h3><p>Modular construction and high specific stiffness for efficient flight.</p></article>
@@ -46,11 +41,6 @@ The project addresses this conflict through a servo-driven folding-wing architec
 
 The CAD model separates the aircraft into coordinated fuselage, foldable-wing, tail-control, and propulsion modules. The transformation mechanism is concentrated at the wing root, using a direct transmission path from the servo to the crank arm, linkage, and rotating wing assembly.
 
-<figure class="aircraft-project__feature">
-  <img src="{{ '/images/trans-medium-aircraft/wing-motion.gif' | relative_url }}" alt="SolidWorks animation showing the aircraft wing folding mechanism">
-  <figcaption><span>01A · KINEMATICS</span><strong>Servo → crank arm → linkage → wing rotation</strong></figcaption>
-</figure>
-
 ### Mechanical Architecture
 
 <div class="aircraft-project__modules">
@@ -60,40 +50,16 @@ The CAD model separates the aircraft into coordinated fuselage, foldable-wing, t
   <article><span>04 / ACTUATION</span><h3>Transformation mechanism</h3><p>A servo-driven linkage provides a compact and serviceable folding-wing motion path.</p></article>
 </div>
 
-<div class="aircraft-project__media-grid aircraft-project__media-grid--cad">
-  <figure class="aircraft-project__media-large">
-    <img src="{{ '/images/trans-medium-aircraft/exploded.gif' | relative_url }}" alt="Exploded animation of the complete aircraft assembly">
-    <figcaption>01B · Exploded system assembly</figcaption>
-  </figure>
-  <figure>
-    <img src="{{ '/images/trans-medium-aircraft/cad-view-01.png' | relative_url }}" alt="Detailed SolidWorks view of the aircraft assembly interfaces">
-    <figcaption>01C · Assembly interface study</figcaption>
-  </figure>
-  <figure>
-    <img src="{{ '/images/trans-medium-aircraft/cad-view-02.png' | relative_url }}" alt="SolidWorks structural arrangement of the aircraft">
-    <figcaption>01D · Structural arrangement</figcaption>
-  </figure>
+<div class="aircraft-project__sequence">
+  <div><span>01</span><strong>System layout</strong><p>Define the airframe modules, interfaces, and available installation volume.</p></div>
+  <div><span>02</span><strong>Part modeling</strong><p>Build the fuselage, wing-root mechanism, linkages, tail, and sealed compartment.</p></div>
+  <div><span>03</span><strong>Assembly validation</strong><p>Check clearances, motion range, connection constraints, and serviceability.</p></div>
+  <div><span>04</span><strong>Design iteration</strong><p>Refine the geometry using structural and flow-field simulation feedback.</p></div>
 </div>
 
 ## 02 · Flow-Field Simulation
 
-The numerical work connects the aircraft geometry to aerodynamic lift, wake development, pressure and velocity distribution, and transient response during the air–water transition. This section provides the display framework for progressively adding boundary conditions, mesh strategy, solver configuration, and configuration comparisons.
-
-<figure class="aircraft-project__feature aircraft-project__feature--dark">
-  <img src="{{ '/images/trans-medium-aircraft/flow-field-detail.jpg' | relative_url }}" alt="Computed external flow field around the trans-medium aircraft">
-  <figcaption><span>02A · WHOLE AIRCRAFT</span><strong>External flow-field distribution</strong></figcaption>
-</figure>
-
-<div class="aircraft-project__media-grid aircraft-project__media-grid--simulation">
-  <figure>
-    <img src="{{ '/images/trans-medium-aircraft/flow-transition.gif' | relative_url }}" alt="Animated transient flow-field simulation around the aircraft">
-    <figcaption><strong>02B · Transient flow field</strong><span>Early-stage changes in pressure and velocity distribution.</span></figcaption>
-  </figure>
-  <figure>
-    <img src="{{ '/images/trans-medium-aircraft/water-entry.gif' | relative_url }}" alt="Water-entry simulation of the folded-wing aircraft">
-    <figcaption><strong>02C · Water-entry response</strong><span>Folded geometry reduces projected impact area before entry.</span></figcaption>
-  </figure>
-</div>
+The numerical work connects the aircraft geometry to aerodynamic lift, wake development, pressure and velocity distribution, and transient response during the air–water transition. The analysis framework is designed to progressively incorporate boundary conditions, mesh strategy, solver configuration, and configuration comparisons.
 
 ### Reference Simulation Parameters
 
@@ -114,7 +80,7 @@ The numerical work connects the aircraft geometry to aerodynamic lift, wake deve
 
 <div class="aircraft-project__next">
   <span>NEXT ITERATION</span>
-  <p>Add annotated part callouts, mesh and boundary-condition diagrams, and a quantitative deployed-versus-folded comparison as the simulation evidence is finalized.</p>
+  <p>Add verified boundary conditions, mesh strategy, solver setup, and a quantitative deployed-versus-folded comparison as the simulation evidence is finalized.</p>
 </div>
 
 [← Back to Experience]({{ "/experience/" | relative_url }}){: .aircraft-project__back}
