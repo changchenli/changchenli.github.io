@@ -74,20 +74,22 @@ The numerical work connects the aircraft geometry to aerodynamic lift, wake deve
 
 ### Analysis Structure
 
-1. **Atmospheric flight:** evaluate lift generation and whole-aircraft external flow.
-
-<div class="aircraft-project__simulation-media">
-  <figure>
-    <img src="{{ '/images/trans-medium-aircraft/lift-simulation.gif' | relative_url }}" alt="Animated lift simulation of the aircraft wing">
-    <figcaption>Lift simulation · Single-wing lift evaluation</figcaption>
-  </figure>
-  <figure>
-    <img src="{{ '/images/trans-medium-aircraft/flight-flow-stable.gif' | relative_url }}" alt="Steady-stage external flow-field simulation around the aircraft">
-    <figcaption>Flight flow field · Established steady-flow stage</figcaption>
-  </figure>
-</div>
-
-2. **Water entry:** inspect transient impact loading and the structural response around wing–fuselage interfaces.
+<ol class="aircraft-project__analysis-list">
+  <li>
+    <strong>Atmospheric flight:</strong> evaluate lift generation and whole-aircraft external flow.
+    <div class="aircraft-project__simulation-media">
+      <figure>
+        <img src="{{ '/images/trans-medium-aircraft/lift-simulation.gif' | relative_url }}" alt="Animated lift simulation of the aircraft wing">
+        <figcaption>Lift simulation · Single-wing lift evaluation</figcaption>
+      </figure>
+      <figure>
+        <img src="{{ '/images/trans-medium-aircraft/flight-flow-stable.gif' | relative_url }}" alt="Steady-stage external flow-field simulation around the aircraft">
+        <figcaption>Flight flow field · Established steady-flow stage</figcaption>
+      </figure>
+    </div>
+  </li>
+  <li><strong>Water entry:</strong> inspect transient impact loading and the structural response around wing–fuselage interfaces.</li>
+</ol>
 
 [← Back to Experience]({{ "/experience/" | relative_url }}){: .aircraft-project__back}
 
