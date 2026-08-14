@@ -87,7 +87,7 @@ The numerical work connects the aircraft geometry to aerodynamic lift, wake deve
   </figure>
 </div>
 
-3. **Water entry:** inspect transient impact loading and the structural response around wing–fuselage interfaces.
+2. **Water entry:** inspect transient impact loading and the structural response around wing–fuselage interfaces.
 
 [← Back to Experience]({{ "/experience/" | relative_url }}){: .aircraft-project__back}
 
