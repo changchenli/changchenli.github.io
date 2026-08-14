@@ -62,6 +62,17 @@ The CAD model separates the aircraft into coordinated fuselage, foldable-wing, t
 
 The numerical work connects the aircraft geometry to aerodynamic lift, wake development, pressure and velocity distribution, and transient response during the air–water transition. The analysis framework is designed to progressively incorporate boundary conditions, mesh strategy, solver configuration, and configuration comparisons.
 
+<div class="aircraft-project__simulation-media">
+  <figure>
+    <img src="{{ '/images/trans-medium-aircraft/lift-simulation.gif' | relative_url }}" alt="Animated lift simulation of the aircraft wing">
+    <figcaption>Lift simulation · Single-wing lift evaluation</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/images/trans-medium-aircraft/flight-flow-stable.gif' | relative_url }}" alt="Steady-stage external flow-field simulation around the aircraft">
+    <figcaption>Flight flow field · Established steady-flow stage</figcaption>
+  </figure>
+</div>
+
 ### Reference Simulation Parameters
 
 | Parameter | Current reference value |
