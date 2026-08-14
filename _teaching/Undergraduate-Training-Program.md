@@ -58,6 +58,37 @@ The CAD model separates the aircraft into coordinated fuselage, foldable-wing, t
   <div><span>04</span><strong>Design iteration</strong><p>Refine the geometry using structural and flow-field simulation feedback.</p></div>
 </div>
 
+### Physical Prototype
+
+<p class="aircraft-project__prototype-intro">The physical prototype validates the assembly interfaces, folding-wing linkage, control-surface installation, and propulsion integration developed in the CAD model.</p>
+
+<div class="aircraft-project__prototype-gallery">
+  <div class="aircraft-project__prototype-row aircraft-project__prototype-row--landscape">
+    <figure>
+      <img src="{{ '/images/trans-medium-aircraft/prototype-tail-assembly.png' | relative_url }}" alt="Physical prototype of the aircraft tail assembly" loading="lazy" decoding="async">
+      <figcaption>Tail assembly</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ '/images/trans-medium-aircraft/prototype-propulsion-unit.png' | relative_url }}" alt="Physical prototype propulsion motor and mounting interface" loading="lazy" decoding="async">
+      <figcaption>Propulsion unit and mounting interface</figcaption>
+    </figure>
+  </div>
+  <div class="aircraft-project__prototype-row aircraft-project__prototype-row--portrait">
+    <figure>
+      <img src="{{ '/images/trans-medium-aircraft/prototype-folded-wing.png' | relative_url }}" alt="Physical prototype showing the folded-wing configuration" loading="lazy" decoding="async">
+      <figcaption>Folded-wing configuration</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ '/images/trans-medium-aircraft/prototype-wing-panel-joint.png' | relative_url }}" alt="Physical prototype wing-panel connection detail" loading="lazy" decoding="async">
+      <figcaption>Wing-panel connection</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ '/images/trans-medium-aircraft/prototype-wing-root-mechanism.png' | relative_url }}" alt="Physical prototype of the wing-root actuation linkage" loading="lazy" decoding="async">
+      <figcaption>Wing-root actuation linkage</figcaption>
+    </figure>
+  </div>
+</div>
+
 ## 02 · Flow-Field Simulation
 
 The numerical work connects the aircraft geometry to aerodynamic lift, wake development, pressure and velocity distribution, and transient response during the air–water transition. The analysis framework is designed to progressively incorporate boundary conditions, mesh strategy, solver configuration, and configuration comparisons.

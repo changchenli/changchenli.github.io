@@ -130,6 +130,54 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: start;
   }
+
+  &__prototype-intro {
+    max-width: 52rem;
+    color: var(--aircraft-muted);
+  }
+
+  &__prototype-gallery {
+    max-width: 64rem;
+    margin: 2rem auto 4rem;
+
+    figure {
+      min-width: 0;
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--aircraft-line);
+      background: #f4f7f5;
+    }
+
+    figcaption {
+      padding-top: .65rem;
+      color: var(--aircraft-muted);
+      font-size: .72em;
+      letter-spacing: .03em;
+    }
+  }
+
+  &__prototype-row {
+    display: grid;
+    gap: 1rem;
+
+    & + & {
+      margin-top: 1rem;
+    }
+
+    &--landscape {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &--portrait {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
   &__sequence {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -207,8 +255,17 @@
     &__principles,
     &__structure-media,
     &__simulation-media,
+    &__prototype-row--landscape,
+    &__prototype-row--portrait,
     &__sequence {
       grid-template-columns: 1fr;
+    }
+
+    &__prototype-gallery figure {
+      width: 100%;
+      max-width: 28rem;
+      margin-right: auto;
+      margin-left: auto;
     }
 
     &__facts div + div,
