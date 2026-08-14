@@ -84,14 +84,6 @@ The individual study focused on a worm-and-shaft transmission. After preparing t
   </figure>
 </div>
 
-## Framework for the Next Content Pass
-
-<div class="saic-project__roadmap">
-  <article><span>CAD</span><h3>Model evolution</h3><p>Add baseline and optimized assemblies, exploded views, and key interface details.</p></article>
-  <article><span>CAE</span><h3>Simulation setup</h3><p>Add the load case, constraint diagram, mesh strategy, and before/after result maps.</p></article>
-  <article><span>RESULTS</span><h3>Engineering evidence</h3><p>Add a compact comparison table and transmission-error curve with public-safe annotations.</p></article>
-</div>
-
 [← Back to Experience]({{ "/experience/" | relative_url }}){: .aircraft-project__back}
 
 </div>
