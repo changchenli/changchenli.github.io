@@ -34,12 +34,12 @@ The corner-module model was developed from a review of representative architectu
 
 <div class="aircraft-project__structure-media">
   <figure>
-    <img src="{{ '/images/saic-smart-chassis/corner-module-reference.png' | relative_url }}" alt="Reference CAD model used to study the corner-module architecture" loading="lazy" decoding="async">
-    <figcaption>Architecture study · Reference corner-module configuration</figcaption>
+    <img src="{{ '/images/saic-smart-chassis/corner-module-rotation.gif' | relative_url }}" alt="Animated rotation of the complete corner-module CAD assembly" loading="lazy" decoding="async">
+    <figcaption>CAD assembly · Continuous corner-module rotation</figcaption>
   </figure>
   <figure>
-    <img src="{{ '/images/saic-smart-chassis/corner-module-load-path.png' | relative_url }}" alt="Simplified mechanical diagram of the corner-module load path" loading="lazy" decoding="async">
-    <figcaption>Engineering abstraction · Simplified structure and load path</figcaption>
+    <img src="{{ '/images/saic-smart-chassis/corner-module-exploded.gif' | relative_url }}" alt="Animated exploded view of the corner-module assembly" loading="lazy" decoding="async">
+    <figcaption>Assembly structure · Exploded view of the corner-module components</figcaption>
   </figure>
 </div>
 
