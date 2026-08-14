@@ -40,6 +40,17 @@ The project addresses this conflict through a servo-driven folding-wing architec
 The CAD model separates the aircraft into coordinated fuselage, foldable-wing, tail-control, and propulsion modules. The transformation mechanism is concentrated at the wing root, using a direct transmission path from the servo to the crank arm, linkage, and rotating wing assembly.
 
 
+<div class="aircraft-project__structure-media">
+  <figure>
+    <img src="{{ '/images/trans-medium-aircraft/wing-motion.gif' | relative_url }}" alt="SolidWorks animation of the foldable-wing transmission mechanism">
+    <figcaption>Wing-folding mechanism</figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/images/trans-medium-aircraft/exploded.gif' | relative_url }}" alt="Exploded SolidWorks animation of the trans-medium aircraft assembly">
+    <figcaption>Exploded assembly</figcaption>
+  </figure>
+</div>
+
 <div class="aircraft-project__sequence">
   <div><span>01</span><strong>System layout</strong><p>Define the airframe modules, interfaces, and available installation volume.</p></div>
   <div><span>02</span><strong>Part modeling</strong><p>Build the fuselage, wing-root mechanism, linkages, tail, and sealed compartment.</p></div>
