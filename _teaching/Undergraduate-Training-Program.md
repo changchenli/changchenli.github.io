@@ -35,7 +35,7 @@ The project addresses this conflict through a servo-driven folding-wing architec
   <article><span>04 / VALIDATION</span><h3>Cross-Medium Performance Validation</h3><p>Structural response, aerodynamic lift, flow distribution, and water-entry loads are evaluated together to guide design iteration.</p></article>
 </div>
 
-## 跨介质飞行器结构
+## 01 · Trans-Medium Aircraft Structure
 
 The CAD model separates the aircraft into coordinated fuselage, foldable-wing, tail-control, and propulsion modules. The transformation mechanism is concentrated at the wing root, using a direct transmission path from the servo to the crank arm, linkage, and rotating wing assembly.
 
