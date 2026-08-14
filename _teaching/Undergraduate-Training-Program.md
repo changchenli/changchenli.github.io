@@ -18,8 +18,6 @@ comments: false
 <p class="aircraft-project__lead">A foldable-wing aircraft developed to operate across air and water, where aerodynamic efficiency, underwater drag, water-entry impact, sealing, and structural reliability must be considered as one system.</p>
 
 <div class="aircraft-project__facts">
-  <div><span>ROLE</span><strong>Team Leader<br>Structural Design</strong></div>
-  <div><span>PERIOD</span><strong>2024–2026<br>National Program</strong></div>
   <div><span>TOOLS</span><strong>SolidWorks<br>ANSYS · CFD</strong></div>
   <div><span>FOCUS</span><strong>Foldable Wing<br>Air–Water Transition</strong></div>
 </div>
@@ -37,7 +35,7 @@ The project addresses this conflict through a servo-driven folding-wing architec
   <article><span>04 / VALIDATION</span><h3>Cross-Medium Performance Validation</h3><p>Structural response, aerodynamic lift, flow distribution, and water-entry loads are evaluated together to guide design iteration.</p></article>
 </div>
 
-## 01 · SolidWorks Model
+## 跨介质飞行器结构
 
 The CAD model separates the aircraft into coordinated fuselage, foldable-wing, tail-control, and propulsion modules. The transformation mechanism is concentrated at the wing root, using a direct transmission path from the servo to the crank arm, linkage, and rotating wing assembly.
 
@@ -66,14 +64,7 @@ The numerical work connects the aircraft geometry to aerodynamic lift, wake deve
 ### Analysis Structure
 
 1. **Atmospheric flight:** evaluate lift generation and whole-aircraft external flow.
-2. **Configuration transition:** compare deployed and folded geometries as the wing mechanism moves.
 3. **Water entry:** inspect transient impact loading and the structural response around wing–fuselage interfaces.
-4. **Design feedback:** use pressure, velocity, stress, and deformation results to guide local reinforcement and geometry refinement.
-
-<div class="aircraft-project__next">
-  <span>NEXT ITERATION</span>
-  <p>Add verified boundary conditions, mesh strategy, solver setup, and a quantitative deployed-versus-folded comparison as the simulation evidence is finalized.</p>
-</div>
 
 [← Back to Experience]({{ "/experience/" | relative_url }}){: .aircraft-project__back}
 

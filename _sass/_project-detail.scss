@@ -3,7 +3,6 @@
   --aircraft-muted: #64706b;
   --aircraft-line: #d8dfdb;
   --aircraft-green: #2a6f62;
-  --aircraft-mint: #dff1e9;
 
   color: var(--aircraft-ink);
 
@@ -17,7 +16,7 @@
 
   &__facts {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     margin: 2rem 0 4rem;
     border-top: 1px solid var(--aircraft-ink);
     border-bottom: 1px solid var(--aircraft-line);
@@ -133,29 +132,6 @@
     }
   }
 
-  &__next {
-    display: grid;
-    grid-template-columns: 8rem 1fr;
-    gap: 1.5rem;
-    margin: 3.5rem 0 2rem;
-    padding: 1.4rem;
-    border-left: .3rem solid var(--aircraft-green);
-    background: var(--aircraft-mint);
-
-    span {
-      color: var(--aircraft-green);
-      font-size: .7em;
-      font-weight: 700;
-      letter-spacing: .07em;
-    }
-
-    p {
-      margin: 0;
-      font-size: .88em;
-      line-height: 1.65;
-    }
-  }
-
   &__back {
     display: inline-block;
     margin-top: 1.5rem;
@@ -179,14 +155,12 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    &__facts div:nth-child(3),
     &__principles article:nth-child(3) {
       padding-left: 0;
       border-left: 0;
       border-top: 1px solid var(--aircraft-line);
     }
 
-    &__facts div:nth-child(4),
     &__principles article:nth-child(4) {
       border-top: 1px solid var(--aircraft-line);
     }
@@ -206,9 +180,5 @@
       border-top: 1px solid var(--aircraft-line);
     }
 
-    &__next {
-      grid-template-columns: 1fr;
-      gap: .7rem;
-    }
   }
 }
