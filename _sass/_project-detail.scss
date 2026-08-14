@@ -277,3 +277,123 @@
 
   }
 }
+
+/* SAIC smart-chassis detail page */
+.saic-project {
+  --aircraft-ink: #14212b;
+  --aircraft-muted: #5e6c76;
+  --aircraft-line: #d7e0e5;
+  --aircraft-green: #176b87;
+
+  &__result-grid {
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    gap: 1.25rem;
+    align-items: stretch;
+    margin: 2rem 0 4rem;
+
+    figure { min-width: 0; margin: 0; }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--aircraft-line);
+      background: #f5f8fa;
+    }
+    figcaption {
+      padding-top: .65rem;
+      color: var(--aircraft-muted);
+      font-size: .71em;
+    }
+  }
+
+  &__metrics {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    border: 1px solid var(--aircraft-line);
+    background: var(--aircraft-line);
+
+    div { padding: 1.35rem; background: #edf6f8; }
+    span, strong { display: block; }
+    span {
+      margin-bottom: 1.3rem;
+      color: var(--aircraft-green);
+      font-size: .65em;
+      letter-spacing: .08em;
+    }
+    strong { font-size: 2em; line-height: 1; }
+    p {
+      margin: .65rem 0 0;
+      color: var(--aircraft-muted);
+      font-size: .76em;
+    }
+  }
+
+  &__feature {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem 0 4rem;
+    padding: 1.5rem;
+    border: 1px solid var(--aircraft-line);
+    background: #f8fafb;
+
+    h3 { margin: .7rem 0 1rem; }
+    p, li {
+      color: var(--aircraft-muted);
+      font-size: .82em;
+      line-height: 1.7;
+    }
+    figure { min-width: 0; margin: 0; }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--aircraft-line);
+      background: #fff;
+    }
+    figcaption {
+      padding-top: .65rem;
+      color: var(--aircraft-muted);
+      font-size: .71em;
+    }
+  }
+
+  &__eyebrow {
+    color: var(--aircraft-green);
+    font-size: .65em;
+    letter-spacing: .09em;
+  }
+
+  &__roadmap {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 2rem 0 4rem;
+
+    article {
+      padding: 1.25rem;
+      border: 1px dashed #a9bac4;
+      background: #fbfcfd;
+    }
+    span {
+      color: var(--aircraft-green);
+      font-size: .65em;
+      letter-spacing: .09em;
+    }
+    h3 { margin: 1.8rem 0 .65rem; font-size: .9em; }
+    p {
+      margin: 0;
+      color: var(--aircraft-muted);
+      font-size: .76em;
+      line-height: 1.65;
+    }
+  }
+
+  @media (max-width: 48em) {
+    &__result-grid, &__feature, &__roadmap { grid-template-columns: 1fr; }
+    &__feature { gap: 1.25rem; padding: 1rem; }
+  }
+}

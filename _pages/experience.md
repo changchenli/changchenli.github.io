@@ -6,7 +6,7 @@ author_profile: true
 
 ## Internship
 
-### SAIC Motor - Smart Chassis Systems
+### [SAIC Motor - Smart Chassis Systems]({{ "/experience/saic-smart-chassis/" | relative_url }})
 *Chassis Dynamics Department · July 2025 - August 2025*
 
 - Designed a simplified double-wishbone corner module model.
