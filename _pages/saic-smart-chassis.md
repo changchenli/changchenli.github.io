@@ -57,8 +57,7 @@ The corner-module model was developed from a review of representative architectu
 <div class="saic-project__optimization-story">
   <aside class="saic-project__metrics saic-project__metrics--compact">
     <div><span>MAXIMUM STRESS</span><strong>-51.3%</strong><p>485.61 → 236.35 MPa</p></div>
-    <div><span>FINAL GEOMETRY</span><strong>30 / 30 mm</strong><p>Lower fillet / base thickness</p></div>
-    <div><span>COMPONENT MASS</span><strong>-65.6%</strong><p>13.671 → 4.7 kg with A6061</p></div>
+    <div><span>COMPONENT MASS</span><strong>-65.6%</strong><p><b>13.671 kg</b> Q345 baseline → <b>13.771 kg</b> Q345 optimized → <b>4.7 kg</b> A6061</p></div>
   </aside>
 
   <div class="saic-project__optimization-flow">
@@ -129,6 +128,12 @@ The corner-module model was developed from a review of representative architectu
       <span><b>389.25</b><small>Geometry</small></span><i>→</i>
       <span><b>265.84</b><small>Thickness</small></span><i>→</i>
       <span class="is-final"><b>236.35 MPa</b><small>Final</small></span>
+    </div>
+
+    <div class="saic-project__mass-route" aria-label="Component mass progression from the baseline Q345 structure to the A6061 final design">
+      <span><b>13.671 kg</b><small>Q345 · Baseline</small></span><i>→</i>
+      <span><b>13.771 kg</b><small>Q345 · Optimized geometry</small><em>+0.73%</em></span><i>→</i>
+      <span class="is-final"><b>4.7 kg</b><small>A6061 · Material substitution</small><em>-65.6%</em></span>
     </div>
 
     <div class="saic-project__design-response">
