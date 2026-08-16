@@ -81,7 +81,7 @@ The corner-module model was developed from a review of representative architectu
             <img src="{{ '/images/saic-smart-chassis/knuckle-topology-process.png' | relative_url }}" alt="Topology-optimization material distribution around the steering-knuckle base and lower fillet" loading="lazy" decoding="async">
             <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
               <ellipse cx="58" cy="71" rx="27" ry="16"></ellipse>
-              <path d="M27 57 C36 45, 49 42, 63 49"></path>
+              <ellipse cx="45" cy="52" rx="21" ry="9" transform="rotate(-12 45 52)"></ellipse>
             </svg>
           </div>
           <figcaption><strong>Material-removal guidance</strong><p>The emerging load path points to two design levers.</p><span class="saic-project__process-tag">Larger fillet</span><span class="saic-project__process-tag">Reshaped base</span></figcaption>
@@ -138,7 +138,7 @@ The corner-module model was developed from a review of representative architectu
 
     <div class="saic-project__design-response">
       <span>DESIGN DECISION</span>
-      <p>A reinforcing-rib trial was rejected because it raised peak stress to <strong>604.91 MPa</strong>. The selected geometry instead combines a 30 mm fillet, semicircular 30 mm base, and smooth side-plate transition; an A6061 material substitution then reduces component mass to <strong>4.7 kg</strong>.</p>
+      <p>A reinforcing-rib trial was rejected because it raised peak stress to <strong>604.91 MPa</strong>. The selected geometry instead combines a 30 mm fillet, semicircular 30 mm base, and smooth side-plate transition.</p>
     </div>
   </div>
 </div>

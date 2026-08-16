@@ -543,18 +543,20 @@
   &__mass-route {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
-    align-items: center;
+    align-items: start;
     gap: .55rem;
     padding: .85rem 1rem;
     border-bottom: 1px solid var(--aircraft-line);
 
     span {
-      display: grid;
-      grid-template-columns: auto auto;
-      gap: .12rem .4rem;
+      position: relative;
+      display: flex;
+      gap: .4rem;
       align-items: baseline;
       justify-content: center;
       min-width: 0;
+      min-height: 2.2rem;
+      padding-bottom: 1rem;
       color: var(--aircraft-ink);
     }
 
@@ -564,15 +566,25 @@
       font-size: .54em;
       text-transform: uppercase;
       letter-spacing: .06em;
+      white-space: nowrap;
     }
     em {
-      grid-column: 1 / -1;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
       color: var(--aircraft-muted);
       font-size: .52em;
       font-style: normal;
       text-align: center;
     }
-    i { color: var(--aircraft-green); font-size: .8em; font-style: normal; }
+    i {
+      align-self: start;
+      margin-top: .18rem;
+      color: var(--aircraft-green);
+      font-size: .8em;
+      font-style: normal;
+    }
     .is-final b,
     .is-final em { color: var(--aircraft-green); }
   }
@@ -731,8 +743,12 @@
 
     &__mass-route {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
+
+      span { width: 100%; }
+      i { margin: 0; transform: rotate(90deg); }
     }
 
     &__design-response { grid-template-columns: 1fr; gap: .35rem; }
