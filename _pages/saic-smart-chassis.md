@@ -88,8 +88,8 @@ The individual study focused on a worm-and-shaft transmission. After preparing t
 
 <div class="saic-project__results-gallery">
   <figure>
-    <img src="{{ '/images/saic-smart-chassis/worm-gear-result-overview.gif' | relative_url }}" alt="Animated overview cycling through the worm-gear stress and strain result cloud maps" loading="lazy" decoding="async">
-    <figcaption><strong>Result overview</strong><span>Stress and strain cloud-map sequence</span></figcaption>
+    <img src="{{ '/images/saic-smart-chassis/worm-gear-result-overview.gif' | relative_url }}" alt="Animated full-assembly worm-gear simulation result cloud map" loading="lazy" decoding="async">
+    <figcaption><strong>Result overview</strong><span>Full-assembly transient cloud-map animation</span></figcaption>
   </figure>
   <figure>
     <img src="{{ '/images/saic-smart-chassis/worm-gear-strain-overall.gif' | relative_url }}" alt="Animated equivalent elastic strain result for the complete worm-gear assembly" loading="lazy" decoding="async">
