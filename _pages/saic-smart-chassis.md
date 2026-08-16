@@ -68,20 +68,20 @@ The corner-module model was developed from a review of representative architectu
 The individual study focused on a worm-and-shaft transmission. After preparing the geometry for analysis, the workflow progressed through meshing, contact and boundary-condition definition, solution checks, and interpretation of stress, strain, and deformation results. The simulation work also supported the construction of a transmission-error curve for comparing the original and processed geometries.
 
 <div class="saic-project__solver-snapshot">
-  <div class="saic-project__solver-heading">
-    <span class="saic-project__eyebrow">NO_CHANGE · BASELINE MODEL</span>
-    <h3>Solver snapshot</h3>
-    <p>Verified from the archived ANSYS input and solver output. Counts below describe the baseline geometry before the external-shape modification.</p>
-  </div>
-  <div class="saic-project__solver-grid">
-    <div><span>MESH NODES</span><strong>13,982</strong><p>Nodes reported before solution.</p></div>
-    <div><span>TOTAL ELEMENTS</span><strong>81,344</strong><p>Complete pre-solve element set.</p></div>
-    <div><span>SOLID185</span><strong>62,956</strong><p>First-order structural solid elements.</p></div>
-    <div><span>CONTACT ELEMENTS</span><strong>18,384</strong><p>Contact and target discretization.</p></div>
-    <div><span>TRANSIENT WINDOW</span><strong>1.0 s</strong><p>Full transient analysis using HHT integration.</p></div>
-    <div><span>AUTO SUBSTEPS</span><strong>1000</strong><p>Initial · 800 minimum · 1500 maximum.</p></div>
-  </div>
-  <p class="saic-project__solver-note"><strong>Solution context:</strong> large-deformation effects enabled · friction coefficient 0.2 · moderate-speed transient settings · 4 CPU domains.</p>
+  <h3>Baseline solver data</h3>
+  <p>Key ANSYS settings for the <code>no_change</code> model.</p>
+  <table class="saic-project__solver-table">
+    <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>Mesh nodes</td><td>13,982</td></tr>
+      <tr><td>Total elements</td><td>81,344</td></tr>
+      <tr><td>SOLID185 elements</td><td>62,956</td></tr>
+      <tr><td>Contact elements</td><td>18,384</td></tr>
+      <tr><td>Transient window</td><td>1.0 s</td></tr>
+      <tr><td>Automatic substeps</td><td>1000 initial · 800 minimum · 1500 maximum</td></tr>
+    </tbody>
+  </table>
+  <p class="saic-project__solver-note">HHT transient · large deformation · friction coefficient 0.2 · 4 CPU domains.</p>
 </div>
 
 <div class="saic-project__feature">

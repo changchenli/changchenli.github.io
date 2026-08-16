@@ -332,53 +332,41 @@
 
   &__solver-snapshot {
     margin: 2rem 0 2.5rem;
-    border: 1px solid var(--aircraft-line);
-    background: #f8fafb;
-  }
-
-  &__solver-heading {
-    padding: 1.5rem;
-    border-bottom: 1px solid var(--aircraft-line);
-
-    h3 { margin: .55rem 0 .7rem; }
+    h3 { margin: 0 0 .55rem; }
     p {
-      max-width: 46rem;
       margin: 0;
       color: var(--aircraft-muted);
-      font-size: .82em;
-      line-height: 1.7;
+      font-size: .8em;
     }
   }
 
-  &__solver-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1px;
-    background: var(--aircraft-line);
+  &__solver-table {
+    width: 100%;
+    margin: 1rem 0 .75rem;
+    border-collapse: collapse;
+    border: 0;
+    background: transparent;
 
-    div { min-width: 0; padding: 1.2rem; background: #fff; }
-    span, strong { display: block; }
-    span {
-      margin-bottom: .8rem;
+    thead { border-bottom: 1px solid var(--aircraft-line); background: transparent; }
+    th, td {
+      padding: .65rem .75rem;
+      border-bottom: 1px solid var(--aircraft-line);
+      text-align: left;
+    }
+    th {
       color: var(--aircraft-green);
-      font-size: .62em;
-      letter-spacing: .08em;
+      font-size: .68em;
+      font-weight: 600;
+      letter-spacing: .05em;
     }
-    strong { font-size: 1.55em; line-height: 1; }
-    p {
-      margin: .55rem 0 0;
-      color: var(--aircraft-muted);
-      font-size: .72em;
-      line-height: 1.5;
-    }
+    td { font-size: .8em; }
+    th:first-child, td:first-child { width: 42%; }
   }
 
   &__solver-note {
-    margin: 0;
-    padding: 1rem 1.5rem;
-    border-top: 1px solid var(--aircraft-line);
+    margin-top: .75rem !important;
     color: var(--aircraft-muted);
-    font-size: .74em;
+    font-size: .74em !important;
     line-height: 1.6;
   }
 
@@ -388,9 +376,6 @@
     gap: 2rem;
     align-items: center;
     margin: 2rem 0 4rem;
-    padding: 1.5rem;
-    border: 1px solid var(--aircraft-line);
-    background: #f8fafb;
 
     h3 { margin: .7rem 0 1rem; }
     p, li {
@@ -421,11 +406,6 @@
 
   @media (max-width: 48em) {
     &__result-grid, &__feature { grid-template-columns: 1fr; }
-    &__solver-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    &__feature { gap: 1.25rem; padding: 1rem; }
-  }
-
-  @media (max-width: 32em) {
-    &__solver-grid { grid-template-columns: 1fr; }
+    &__feature { gap: 1.25rem; }
   }
 }
