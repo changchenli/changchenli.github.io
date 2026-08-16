@@ -108,7 +108,6 @@ The corner-module model was developed from a review of representative architectu
       <figure class="saic-project__optimization-card saic-project__optimization-card--iteration">
         <span class="saic-project__step-label">03 / BASE THICKNESS</span>
         <div class="saic-project__iteration-media">
-          <img src="{{ '/images/saic-smart-chassis/knuckle-thickness-30mm.png' | relative_url }}" alt="Steering-knuckle semicircular base increased from 20 to 30 millimetres thickness" loading="lazy" decoding="async">
           <img src="{{ '/images/saic-smart-chassis/knuckle-thickened-stress.png' | relative_url }}" alt="ANSYS stress result after increasing the steering-knuckle base thickness to 30 millimetres" loading="lazy" decoding="async">
         </div>
         <figcaption><strong>Increase base thickness · 20 → 30 mm</strong><p>Peak stress falls from 389.25 to <b>265.84 MPa</b>; the critical region shifts to the side-plate corner.</p></figcaption>
@@ -118,8 +117,7 @@ The corner-module model was developed from a review of representative architectu
 
       <figure class="saic-project__optimization-card saic-project__optimization-card--iteration saic-project__optimization-card--final">
         <span class="saic-project__step-label">04 / FINAL DESIGN</span>
-        <div class="saic-project__iteration-media saic-project__iteration-media--final">
-          <img src="{{ '/images/saic-smart-chassis/knuckle-final-cad.png' | relative_url }}" alt="Final steering-knuckle CAD geometry with semicircular 30 millimetre base and smooth side-plate transition" loading="lazy" decoding="async">
+        <div class="saic-project__iteration-media">
           <img src="{{ '/images/saic-smart-chassis/knuckle-final-hotspot.png' | relative_url }}" alt="Final ANSYS stress close-up showing 236.35 megapascal maximum stress at the lower-control-arm hole connection" loading="lazy" decoding="async">
         </div>
         <figcaption><strong>Smooth the side-plate corner</strong><p>Peak stress reaches <b>236.35 MPa</b>, now concentrated at the lower-control-arm hole connection.</p></figcaption>

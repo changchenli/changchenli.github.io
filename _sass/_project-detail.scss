@@ -376,25 +376,12 @@
   }
 
   &__iteration-media {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: .55rem;
-    align-items: stretch;
-
     img {
       display: block;
       width: 100%;
-      height: 11.2rem;
+      height: auto;
       border: 1px solid var(--aircraft-line);
       background: #fff;
-      object-fit: cover;
-    }
-
-    &--final {
-      grid-template-columns: minmax(8rem, .68fr) minmax(0, 1.32fr);
-
-      img:first-child { object-fit: contain; }
-      img:last-child { object-position: center; }
     }
   }
 
@@ -710,8 +697,5 @@
 
   @media (max-width: 34em) {
     &__metrics--compact { grid-template-columns: 1fr; }
-    &__iteration-media,
-    &__iteration-media--final { grid-template-columns: 1fr; }
-    &__iteration-media img { height: auto; max-height: 17rem; object-fit: contain; }
   }
 }
