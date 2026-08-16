@@ -69,7 +69,6 @@ The individual study focused on a worm-and-shaft transmission. After preparing t
 
 <div class="saic-project__solver-snapshot">
   <h3>Baseline solver data</h3>
-  <p>Key ANSYS settings for the <code>no_change</code> model.</p>
   <table class="saic-project__solver-table">
     <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
     <tbody>
@@ -81,24 +80,6 @@ The individual study focused on a worm-and-shaft transmission. After preparing t
       <tr><td>Automatic substeps</td><td>1000 initial · 800 minimum · 1500 maximum</td></tr>
     </tbody>
   </table>
-  <p class="saic-project__solver-note">HHT transient · large deformation · friction coefficient 0.2 · 4 CPU domains.</p>
-</div>
-
-<div class="saic-project__feature">
-  <div>
-    <span class="saic-project__eyebrow">INDIVIDUAL WORKSTREAM</span>
-    <h3>From CAD geometry to mechanical response</h3>
-    <p>The analysis was organized around four checkpoints: geometry preparation, mesh quality, load and contact definition, and result interpretation. This created a repeatable structure for isolating solver issues and comparing design changes.</p>
-    <ul>
-      <li>Prepared the worm-and-shaft assembly for finite-element analysis.</li>
-      <li>Evaluated load-induced stress, strain, and deformation.</li>
-      <li>Connected simulation output to transmission-error evaluation.</li>
-    </ul>
-  </div>
-  <figure>
-    <img src="{{ '/images/saic-smart-chassis/worm-gear-stress.png' | relative_url }}" alt="ANSYS stress result for the worm-and-shaft transmission" loading="lazy" decoding="async">
-    <figcaption>ANSYS result · Representative stress distribution in the transmission assembly</figcaption>
-  </figure>
 </div>
 
 [← Back to Experience]({{ "/experience/" | relative_url }}){: .aircraft-project__back}

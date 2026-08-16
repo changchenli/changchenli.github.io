@@ -333,11 +333,6 @@
   &__solver-snapshot {
     margin: 2rem 0 2.5rem;
     h3 { margin: 0 0 .55rem; }
-    p {
-      margin: 0;
-      color: var(--aircraft-muted);
-      font-size: .8em;
-    }
   }
 
   &__solver-table {
@@ -363,49 +358,7 @@
     th:first-child, td:first-child { width: 42%; }
   }
 
-  &__solver-note {
-    margin-top: .75rem !important;
-    color: var(--aircraft-muted);
-    font-size: .74em !important;
-    line-height: 1.6;
-  }
-
-  &__feature {
-    display: grid;
-    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
-    gap: 2rem;
-    align-items: center;
-    margin: 2rem 0 4rem;
-
-    h3 { margin: .7rem 0 1rem; }
-    p, li {
-      color: var(--aircraft-muted);
-      font-size: .82em;
-      line-height: 1.7;
-    }
-    figure { min-width: 0; margin: 0; }
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border: 1px solid var(--aircraft-line);
-      background: #fff;
-    }
-    figcaption {
-      padding-top: .65rem;
-      color: var(--aircraft-muted);
-      font-size: .71em;
-    }
-  }
-
-  &__eyebrow {
-    color: var(--aircraft-green);
-    font-size: .65em;
-    letter-spacing: .09em;
-  }
-
   @media (max-width: 48em) {
-    &__result-grid, &__feature { grid-template-columns: 1fr; }
-    &__feature { gap: 1.25rem; }
+    &__result-grid { grid-template-columns: 1fr; }
   }
 }
