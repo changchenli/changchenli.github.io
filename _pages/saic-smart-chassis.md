@@ -52,14 +52,23 @@ The corner-module model was developed from a review of representative architectu
   <div><span>04</span><strong>Design iteration</strong><p>Use stress concentration and topology results to revise the geometry under the same analysis case.</p></div>
 </div>
 
+### Steering-Knuckle Optimization
+
 <div class="saic-project__optimization-story">
   <aside class="saic-project__metrics saic-project__metrics--compact">
-    <div><span>MAXIMUM STRESS</span><strong>-19.8%</strong><p>485.61 → 389.25 MPa</p></div>
-    <div><span>MASS CHANGE</span><strong>+0.73%</strong><p>Relative to the baseline model</p></div>
+    <div><span>MAXIMUM STRESS</span><strong>-51.3%</strong><p>485.61 → 236.35 MPa</p></div>
+    <div><span>FINAL GEOMETRY</span><strong>30 / 30 mm</strong><p>Lower fillet / base thickness</p></div>
+    <div><span>COMPONENT MASS</span><strong>-65.6%</strong><p>13.671 → 4.7 kg with A6061</p></div>
   </aside>
 
   <div class="saic-project__optimization-flow">
-    <div class="saic-project__optimization-steps">
+    <div class="saic-project__phase-heading">
+      <span>PHASE 01</span>
+      <strong>Topology-guided geometry screening</strong>
+      <p>The first pass identified the lower fillet and base profile as the two practical design levers.</p>
+    </div>
+
+    <div class="saic-project__optimization-steps saic-project__optimization-steps--screening">
       <figure class="saic-project__optimization-card">
         <span class="saic-project__step-label">01 / BASELINE</span>
         <img src="{{ '/images/saic-smart-chassis/knuckle-baseline-stress.png' | relative_url }}" alt="Baseline steering-knuckle stress result with a 20 millimetre lower fillet and rectangular base" loading="lazy" decoding="async">
@@ -81,15 +90,52 @@ The corner-module model was developed from a review of representative architectu
       </div>
 
       <figure class="saic-project__optimization-card">
-        <span class="saic-project__step-label">02 / REFINED</span>
+        <span class="saic-project__step-label">02 / FIRST REFINEMENT</span>
         <img src="{{ '/images/saic-smart-chassis/knuckle-optimized-stress.png' | relative_url }}" alt="Refined steering-knuckle stress result with a 30 millimetre lower fillet and semicircular base" loading="lazy" decoding="async">
-        <figcaption><strong>30 mm fillet · Semicircular base</strong><p>Peak stress falls to <b>389.25 MPa</b> at the same critical region.</p></figcaption>
+        <figcaption><strong>30 mm fillet · Semicircular base</strong><p>The best screened geometry reduces peak stress to <b>389.25 MPa</b>.</p></figcaption>
       </figure>
     </div>
 
+    <div class="saic-project__iteration-drop" aria-hidden="true"><span>ITERATE THE LOAD PATH</span><b>↓</b></div>
+
+    <div class="saic-project__phase-heading">
+      <span>PHASE 02</span>
+      <strong>Thickness and transition refinement</strong>
+      <p>Two further revisions removed the remaining stress concentration and brought the design below the Q345 yield limit.</p>
+    </div>
+
+    <div class="saic-project__optimization-steps saic-project__optimization-steps--iteration">
+      <figure class="saic-project__optimization-card saic-project__optimization-card--iteration">
+        <span class="saic-project__step-label">03 / BASE THICKNESS</span>
+        <div class="saic-project__iteration-media">
+          <img src="{{ '/images/saic-smart-chassis/knuckle-thickness-30mm.png' | relative_url }}" alt="Steering-knuckle semicircular base increased from 20 to 30 millimetres thickness" loading="lazy" decoding="async">
+          <img src="{{ '/images/saic-smart-chassis/knuckle-thickened-stress.png' | relative_url }}" alt="ANSYS stress result after increasing the steering-knuckle base thickness to 30 millimetres" loading="lazy" decoding="async">
+        </div>
+        <figcaption><strong>Increase base thickness · 20 → 30 mm</strong><p>Peak stress falls from 389.25 to <b>265.84 MPa</b>; the critical region shifts to the side-plate corner.</p></figcaption>
+      </figure>
+
+      <div class="saic-project__iteration-arrow" aria-hidden="true"><span>SMOOTH CORNER</span><b>→</b></div>
+
+      <figure class="saic-project__optimization-card saic-project__optimization-card--iteration saic-project__optimization-card--final">
+        <span class="saic-project__step-label">04 / FINAL DESIGN</span>
+        <div class="saic-project__iteration-media saic-project__iteration-media--final">
+          <img src="{{ '/images/saic-smart-chassis/knuckle-final-cad.png' | relative_url }}" alt="Final steering-knuckle CAD geometry with semicircular 30 millimetre base and smooth side-plate transition" loading="lazy" decoding="async">
+          <img src="{{ '/images/saic-smart-chassis/knuckle-final-hotspot.png' | relative_url }}" alt="Final ANSYS stress close-up showing 236.35 megapascal maximum stress at the lower-control-arm hole connection" loading="lazy" decoding="async">
+        </div>
+        <figcaption><strong>Smooth the side-plate corner</strong><p>Peak stress reaches <b>236.35 MPa</b>, now concentrated at the lower-control-arm hole connection.</p></figcaption>
+      </figure>
+    </div>
+
+    <div class="saic-project__stress-route" aria-label="Peak stress progression from baseline to final design">
+      <span><b>485.61</b><small>Baseline</small></span><i>→</i>
+      <span><b>389.25</b><small>Geometry</small></span><i>→</i>
+      <span><b>265.84</b><small>Thickness</small></span><i>→</i>
+      <span class="is-final"><b>236.35 MPa</b><small>Final</small></span>
+    </div>
+
     <div class="saic-project__design-response">
-      <span>DESIGN RESPONSE</span>
-      <p>A larger lower fillet and semicircular base smooth the load transfer path, reducing peak stress by <strong>96.36 MPa (19.8%)</strong>.</p>
+      <span>DESIGN DECISION</span>
+      <p>A reinforcing-rib trial was rejected because it raised peak stress to <strong>604.91 MPa</strong>. The selected geometry instead combines a 30 mm fillet, semicircular 30 mm base, and smooth side-plate transition; an A6061 material substitution then reduces component mass to <strong>4.7 kg</strong>.</p>
     </div>
   </div>
 </div>
