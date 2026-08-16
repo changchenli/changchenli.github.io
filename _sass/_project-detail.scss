@@ -367,10 +367,6 @@
   }
 
   &__results-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.75rem 1.25rem;
-    align-items: start;
     margin: 0 0 4rem;
 
     figure {
@@ -381,9 +377,7 @@
     img {
       display: block;
       width: 100%;
-      aspect-ratio: 16 / 9;
-      box-sizing: border-box;
-      object-fit: contain;
+      height: auto;
       border: 1px solid var(--aircraft-line);
       background: #fff;
     }
@@ -407,8 +401,19 @@
     }
   }
 
+  &__results-row {
+    display: grid;
+    gap: 1.25rem;
+    align-items: start;
+
+    & + & { margin-top: 1.75rem; }
+
+    &--mixed { grid-template-columns: minmax(0, .63fr) minmax(0, 1fr); }
+    &--paired { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
   @media (max-width: 48em) {
-    &__result-grid,
-    &__results-gallery { grid-template-columns: 1fr; }
+    &__result-grid { grid-template-columns: 1fr; }
+    &__results-row { grid-template-columns: 1fr; }
   }
 }
