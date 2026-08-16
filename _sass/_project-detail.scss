@@ -560,7 +560,7 @@
       color: var(--aircraft-ink);
     }
 
-    b { font-size: .86em; }
+    b { font-size: .86em; white-space: nowrap; }
     small {
       color: var(--aircraft-muted);
       font-size: .54em;
