@@ -82,6 +82,29 @@ The individual study focused on a worm-and-shaft transmission. After preparing t
   </table>
 </div>
 
+### Transient Result Fields
+
+<p class="saic-project__results-intro">Four animated views summarize the transient solution, pairing the overall stress and strain fields with close-up tooth-contact responses.</p>
+
+<div class="saic-project__results-gallery">
+  <figure>
+    <img src="{{ '/images/saic-smart-chassis/worm-gear-result-overview.gif' | relative_url }}" alt="Animated overview cycling through the worm-gear stress and strain result cloud maps" loading="lazy" decoding="async">
+    <figcaption><strong>Result overview</strong><span>Stress and strain cloud-map sequence</span></figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/images/saic-smart-chassis/worm-gear-strain-overall.gif' | relative_url }}" alt="Animated equivalent elastic strain result for the complete worm-gear assembly" loading="lazy" decoding="async">
+    <figcaption><strong>Equivalent elastic strain</strong><span>Full-assembly response</span></figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/images/saic-smart-chassis/worm-gear-strain-contact.gif' | relative_url }}" alt="Animated equivalent elastic strain result at the worm-gear tooth-contact region" loading="lazy" decoding="async">
+    <figcaption><strong>Equivalent elastic strain</strong><span>Tooth-contact detail</span></figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/images/saic-smart-chassis/worm-gear-stress-overall.gif' | relative_url }}" alt="Animated equivalent stress result at the worm-gear tooth-contact region" loading="lazy" decoding="async">
+    <figcaption><strong>Equivalent stress</strong><span>Tooth-contact detail</span></figcaption>
+  </figure>
+</div>
+
 [← Back to Experience]({{ "/experience/" | relative_url }}){: .aircraft-project__back}
 
 </div>
