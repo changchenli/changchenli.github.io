@@ -287,26 +287,152 @@
   --aircraft-line: #d7e0e5;
   --aircraft-green: #176b87;
 
-  &__result-grid {
+  &__optimization-story {
     display: grid;
-    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    grid-template-columns: minmax(8.5rem, .27fr) minmax(0, 1fr);
     gap: 1.25rem;
-    align-items: stretch;
+    align-items: start;
     margin: 2rem 0 4rem;
+  }
 
-    figure { min-width: 0; margin: 0; }
+  &__optimization-flow { min-width: 0; }
+
+  &__optimization-steps {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(7.5rem, .7fr) minmax(0, 1fr);
+    gap: .85rem;
+    align-items: start;
+  }
+
+  &__optimization-card {
+    min-width: 0;
+    margin: 0;
+
+    > img,
+    .saic-project__annotated-result {
+      display: block;
+      width: 100%;
+      border: 1px solid var(--aircraft-line);
+      background: #fff;
+    }
+
+    > img { height: auto; }
+
+    figcaption {
+      padding-top: .6rem;
+      color: var(--aircraft-muted);
+      font-size: .69em;
+      line-height: 1.55;
+
+      strong {
+        display: block;
+        color: var(--aircraft-ink);
+        font-size: 1.08em;
+      }
+
+      p { margin: .25rem 0 0; }
+      b { color: var(--aircraft-ink); }
+    }
+
+    &--process figcaption { font-size: .63em; }
+  }
+
+  &__step-label {
+    display: block;
+    margin-bottom: .45rem;
+    color: var(--aircraft-green);
+    font-size: .58em;
+    font-weight: 600;
+    letter-spacing: .08em;
+  }
+
+  &__optimization-bridge { padding-top: 1.25rem; }
+
+  &__optimization-arrow {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    margin-bottom: .75rem;
+    color: var(--aircraft-green);
+
+    &::before {
+      content: "";
+      flex: 1;
+      border-top: 1px solid currentColor;
+    }
+
+    span {
+      max-width: 5.5rem;
+      font-size: .5em;
+      font-weight: 600;
+      letter-spacing: .06em;
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    b { font-size: 1.1em; line-height: 1; }
+  }
+
+  &__annotated-result {
+    position: relative;
+    overflow: hidden;
+
     img {
       display: block;
       width: 100%;
       height: auto;
-      border: 1px solid var(--aircraft-line);
-      background: #f5f8fa;
     }
-    figcaption {
-      padding-top: .65rem;
+
+    svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+
+      ellipse,
+      path {
+        fill: none;
+        stroke: #d54b3d;
+        stroke-width: 1.5;
+        vector-effect: non-scaling-stroke;
+      }
+    }
+  }
+
+  &__process-tag {
+    display: inline-block;
+    margin: .45rem .25rem 0 0;
+    padding: .18rem .35rem;
+    border: 1px solid var(--aircraft-line);
+    color: var(--aircraft-green);
+    font-size: .9em;
+  }
+
+  &__design-response {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: .75rem;
+    align-items: baseline;
+    margin-top: 1.1rem;
+    padding-top: .85rem;
+    border-top: 1px solid var(--aircraft-line);
+
+    span {
+      color: var(--aircraft-green);
+      font-size: .58em;
+      font-weight: 600;
+      letter-spacing: .08em;
+    }
+
+    p {
+      margin: 0;
       color: var(--aircraft-muted);
-      font-size: .71em;
+      font-size: .72em;
+      line-height: 1.55;
     }
+
+    strong { color: var(--aircraft-ink); }
   }
 
   &__metrics {
@@ -324,11 +450,22 @@
       font-size: .65em;
       letter-spacing: .08em;
     }
+
     strong { font-size: 2em; line-height: 1; }
     p {
       margin: .65rem 0 0;
       color: var(--aircraft-muted);
       font-size: .76em;
+    }
+
+    &--compact {
+      grid-template-rows: auto auto;
+      align-self: start;
+
+      div { padding: .9rem .8rem; background: #f6fafb; }
+      span { margin-bottom: .65rem; font-size: .56em; }
+      strong { font-size: 1.55em; }
+      p { margin-top: .4rem; font-size: .64em; line-height: 1.45; }
     }
   }
 
@@ -415,7 +552,22 @@
   }
 
   @media (max-width: 48em) {
-    &__result-grid { grid-template-columns: 1fr; }
+    &__optimization-story,
+    &__optimization-steps { grid-template-columns: 1fr; }
+
+    &__metrics--compact {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: none;
+    }
+
+    &__optimization-bridge { padding-top: 0; }
+    &__optimization-arrow {
+      width: 10rem;
+      margin: .25rem auto .85rem;
+      b { transform: rotate(90deg); }
+    }
+
+    &__design-response { grid-template-columns: 1fr; gap: .35rem; }
     &__results-row { grid-template-columns: 1fr; }
   }
 }

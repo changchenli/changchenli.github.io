@@ -52,15 +52,46 @@ The corner-module model was developed from a review of representative architectu
   <div><span>04</span><strong>Design iteration</strong><p>Use stress concentration and topology results to revise the geometry under the same analysis case.</p></div>
 </div>
 
-<div class="saic-project__result-grid">
-  <div class="saic-project__metrics">
-    <div><span>MAXIMUM STRESS</span><strong>-51.3%</strong><p>Reduction after structural optimization.</p></div>
-    <div><span>MASS CHANGE</span><strong>+0.73%</strong><p>Increase relative to the baseline model.</p></div>
+<div class="saic-project__optimization-story">
+  <aside class="saic-project__metrics saic-project__metrics--compact">
+    <div><span>MAXIMUM STRESS</span><strong>-19.8%</strong><p>485.61 → 389.25 MPa</p></div>
+    <div><span>MASS CHANGE</span><strong>+0.73%</strong><p>Relative to the baseline model</p></div>
+  </aside>
+
+  <div class="saic-project__optimization-flow">
+    <div class="saic-project__optimization-steps">
+      <figure class="saic-project__optimization-card">
+        <span class="saic-project__step-label">01 / BASELINE</span>
+        <img src="{{ '/images/saic-smart-chassis/knuckle-baseline-stress.png' | relative_url }}" alt="Baseline steering-knuckle stress result with a 20 millimetre lower fillet and rectangular base" loading="lazy" decoding="async">
+        <figcaption><strong>20 mm fillet · Rectangular base</strong><p>Peak stress reaches <b>485.61 MPa</b> at the lower fillet.</p></figcaption>
+      </figure>
+
+      <div class="saic-project__optimization-bridge">
+        <div class="saic-project__optimization-arrow" aria-hidden="true"><span>TOPOLOGY OPTIMIZATION</span><b>→</b></div>
+        <figure class="saic-project__optimization-card saic-project__optimization-card--process">
+          <div class="saic-project__annotated-result">
+            <img src="{{ '/images/saic-smart-chassis/knuckle-topology-process.png' | relative_url }}" alt="Topology-optimization material distribution around the steering-knuckle base and lower fillet" loading="lazy" decoding="async">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <ellipse cx="58" cy="71" rx="27" ry="16"></ellipse>
+              <path d="M27 57 C36 45, 49 42, 63 49"></path>
+            </svg>
+          </div>
+          <figcaption><strong>Material-removal guidance</strong><p>The emerging load path points to two design levers.</p><span class="saic-project__process-tag">Larger fillet</span><span class="saic-project__process-tag">Reshaped base</span></figcaption>
+        </figure>
+      </div>
+
+      <figure class="saic-project__optimization-card">
+        <span class="saic-project__step-label">02 / REFINED</span>
+        <img src="{{ '/images/saic-smart-chassis/knuckle-optimized-stress.png' | relative_url }}" alt="Refined steering-knuckle stress result with a 30 millimetre lower fillet and semicircular base" loading="lazy" decoding="async">
+        <figcaption><strong>30 mm fillet · Semicircular base</strong><p>Peak stress falls to <b>389.25 MPa</b> at the same critical region.</p></figcaption>
+      </figure>
+    </div>
+
+    <div class="saic-project__design-response">
+      <span>DESIGN RESPONSE</span>
+      <p>A larger lower fillet and semicircular base smooth the load transfer path, reducing peak stress by <strong>96.36 MPa (19.8%)</strong>.</p>
+    </div>
   </div>
-  <figure>
-    <img src="{{ '/images/saic-smart-chassis/topology-optimization.gif' | relative_url }}" alt="Animated topology-optimization result for the corner-module structure" loading="lazy" decoding="async">
-    <figcaption>Topology optimization · Material-distribution guidance for structural refinement</figcaption>
-  </figure>
 </div>
 
 ## 02 · Worm-Gear Transmission Analysis
