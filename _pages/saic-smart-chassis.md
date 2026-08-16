@@ -19,7 +19,7 @@ comments: false
 
 ## Internship Overview
 
-The internship combined a team design task with an individual simulation study. The team project examined a simplified double-wishbone corner module for uneven-road loading, while the individual task investigated the mechanical response of a worm-and-shaft transmission. Together, the two workstreams formed a compact engineering loop from **geometry and load definition** to **simulation, comparison, and design iteration**.
+The internship combined a team design task with an individual simulation study. The team project examined a simplified double-wishbone corner module for uneven-road loading, while the individual task investigated the mechanical response of a worm-and-shaft transmission. Together, the two workstreams progressed from **geometry and load definition** to **simulation, comparison, and design iteration**.
 
 <div class="aircraft-project__principles">
   <article><span>01 / MODEL</span><h3>Mechanical Architecture</h3><p>Translate reference structures and physical interfaces into a simplified, analysis-ready corner-module assembly.</p></article>
