@@ -489,6 +489,32 @@
 
   &__demo-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
+  &__dataset-showcase {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.7rem 0 3rem;
+
+    article { min-width: 0; border-top: 2px solid var(--aircraft-green); }
+    header { padding: 1rem 0 1.1rem; }
+    header span, header strong { display: block; }
+    header span { color: var(--aircraft-green); font-size: .62em; font-weight: 600; letter-spacing: .08em; }
+    header strong { margin-top: .45rem; font-size: .9em; }
+    header p { margin: .4rem 0 0; color: var(--aircraft-muted); font-size: .7em; line-height: 1.55; }
+  }
+
+  &__dataset-media {
+    display: grid;
+    grid-template-columns: minmax(8rem, .62fr) minmax(0, 1.38fr);
+    gap: .65rem;
+    align-items: start;
+    padding: .65rem;
+    border: 1px solid var(--aircraft-line);
+    background: var(--challenge-soft);
+
+    img { display: block; width: 100%; height: auto; border: 1px solid var(--aircraft-line); background: #fff; }
+  }
+
   &__detection-strip {
     margin: 0 0 4rem;
     padding-top: 1rem;
@@ -535,24 +561,33 @@
   &__metrics--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   &__metrics--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
-  &__landing-evidence {
+  &__localization-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(14rem, .65fr);
-    gap: 2rem;
-    align-items: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
     margin: 1.8rem 0 2rem;
-    padding: 1rem 0;
     border-top: 1px solid var(--aircraft-ink);
-    border-bottom: 1px solid var(--aircraft-line);
 
     figure { min-width: 0; margin: 0; }
-    img { display: block; width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--aircraft-line); object-fit: cover; }
+    img { display: block; width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--aircraft-line); background: var(--challenge-soft); object-fit: contain; }
     figcaption { padding-top: .6rem; color: var(--aircraft-muted); font-size: .7em; line-height: 1.5; }
     figcaption strong, figcaption span { display: block; }
     figcaption strong { color: var(--aircraft-ink); }
-    > div span { color: var(--aircraft-green); font-size: .62em; font-weight: 600; letter-spacing: .08em; }
-    > div strong { display: block; margin: .8rem 0; font-size: 2.25em; line-height: 1; }
-    > div p { margin: 0; color: var(--aircraft-muted); font-size: .76em; line-height: 1.65; }
+  }
+
+  &__landing-result {
+    display: grid;
+    grid-template-columns: minmax(9rem, .35fr) minmax(0, 1.65fr);
+    gap: 1.5rem;
+    align-items: center;
+    margin: 0 0 2rem;
+    padding: 1.25rem;
+    border: 1px solid var(--aircraft-line);
+    background: var(--challenge-soft);
+
+    span { color: var(--aircraft-green); font-size: .62em; font-weight: 600; letter-spacing: .08em; }
+    strong { display: block; margin-top: .65rem; font-size: 2.25em; line-height: 1; }
+    p { margin: 0; color: var(--aircraft-muted); font-size: .76em; line-height: 1.65; }
   }
 
   &__source-note {
@@ -599,11 +634,15 @@
     &__hero,
     &__year-nav,
     &__workstream-index,
+    &__dataset-showcase,
     &__pipeline,
     &__demo-grid,
     &__detection-strip,
     &__metrics,
-    &__landing-evidence { grid-template-columns: 1fr; }
+    &__localization-grid,
+    &__landing-result { grid-template-columns: 1fr; }
+
+    &__dataset-media { grid-template-columns: minmax(6.5rem, .55fr) minmax(0, 1.45fr); }
 
     &__github { flex-direction: column; align-items: flex-start; }
   }

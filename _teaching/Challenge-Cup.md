@@ -58,6 +58,27 @@ comments: false
   <li><span>Decide</span><strong>Confidence validation</strong><p>Only pass sufficiently confident detections to the landing workflow.</p></li>
 </ol>
 
+#### Dataset Construction
+
+<p class="challenge-project__section-note">The training set combines two target classes with rotation, position, and scale variation. The horizontal layout below reproduces the true / false sample structure used in the 2024 final presentation.</p>
+
+<div class="challenge-project__dataset-showcase">
+  <article>
+    <header><span>TRUE TARGET</span><strong>Positive samples</strong><p>Reference marker and representative augmented views across different headings and image scales.</p></header>
+    <div class="challenge-project__dataset-media">
+      <img src="{{ '/images/challenge-cup/dataset-true-reference.jpg' | relative_url }}" alt="True-target reference image embedded in the 2024 final presentation" loading="lazy" decoding="async">
+      <img src="{{ '/images/challenge-cup/dataset-true-augmentations.png' | relative_url }}" alt="True-target rotation, position, and scale augmentation samples from the 2024 presentation" loading="lazy" decoding="async">
+    </div>
+  </article>
+  <article>
+    <header><span>FALSE TARGET</span><strong>Negative samples</strong><p>Alternative marker and representative augmented views used to teach the classifier target rejection.</p></header>
+    <div class="challenge-project__dataset-media">
+      <img src="{{ '/images/challenge-cup/dataset-false-reference.png' | relative_url }}" alt="False-target reference image embedded in the 2024 final presentation" loading="lazy" decoding="async">
+      <img src="{{ '/images/challenge-cup/dataset-false-augmentations.png' | relative_url }}" alt="False-target rotation, position, and scale augmentation samples from the 2024 presentation" loading="lazy" decoding="async">
+    </div>
+  </article>
+</div>
+
 #### Training Configuration
 
 <div class="challenge-project__table-wrap challenge-project__table-wrap--compact" markdown="1">
@@ -113,16 +134,27 @@ comments: false
 
 #### Localization Result
 
-<div class="challenge-project__landing-evidence">
+<div class="challenge-project__localization-grid">
   <figure>
     <img src="{{ '/images/challenge-cup/landing-localization.gif' | relative_url }}" alt="Animated landing-point localization sequence" loading="lazy" decoding="async">
-    <figcaption><strong>Landing-point localization</strong><span>SIFT matching, center estimation, and geometric validation</span></figcaption>
+    <figcaption><strong>Center confirmation</strong><span>Template matching and image-center estimation</span></figcaption>
   </figure>
+  <figure>
+    <img src="{{ '/images/challenge-cup/landing-geometry-color.gif' | relative_url }}" alt="Animated geometric validation and color-block detection sequence from the 2024 presentation" loading="lazy" decoding="async">
+    <figcaption><strong>Geometry and color validation</strong><span>Candidate boundary and marker-color checks</span></figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/images/challenge-cup/landing-confidence-improved.gif' | relative_url }}" alt="Animated improved landing-point sequence after adding the confidence module" loading="lazy" decoding="async">
+    <figcaption><strong>Confidence-module improvement</strong><span>Improved result shown in the final presentation</span></figcaption>
+  </figure>
+</div>
+
+<div class="challenge-project__landing-result">
   <div>
     <span>REPORTED IMPROVEMENT</span>
     <strong>&gt;50%</strong>
-    <p>The final presentation reports that adding the confidence module improved landing-box precision by more than 50%. Coordinate output is withheld when valid landing-point evidence is unavailable.</p>
   </div>
+  <p>The final presentation reports that adding the confidence module improved landing-box precision by more than 50%. Coordinate output is withheld when valid landing-point evidence is unavailable.</p>
 </div>
 
 </div>
