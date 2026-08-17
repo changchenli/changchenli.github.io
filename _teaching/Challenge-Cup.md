@@ -64,25 +64,23 @@ comments: false
 
 <div class="challenge-project__dataset-showcase">
   <article>
-    <header><span>TRUE TARGET</span><strong>Positive samples</strong><p>Reference marker and representative augmented views across different headings and image scales.</p></header>
+    <header><span>TRUE TARGET</span><p>Only true targets proceed to the landing-point determination stage.</p></header>
     <div class="challenge-project__dataset-media">
       <img src="{{ '/images/challenge-cup/dataset-true-reference.jpg' | relative_url }}" alt="True-target reference image embedded in the 2024 final presentation" loading="lazy" decoding="async">
       <img src="{{ '/images/challenge-cup/dataset-true-augmentations.png' | relative_url }}" alt="True-target rotation, position, and scale augmentation samples from the 2024 presentation" loading="lazy" decoding="async">
     </div>
     <figure class="challenge-project__dataset-result">
       <img src="{{ '/images/challenge-cup/target-true.gif' | relative_url }}" alt="Animated recognition sequence for a true landing target" loading="lazy" decoding="async">
-      <figcaption><strong>True-target recognition</strong><span>Valid target passed to the next mission stage</span></figcaption>
     </figure>
   </article>
   <article>
-    <header><span>FALSE TARGET</span><strong>Negative samples</strong><p>Alternative marker and representative augmented views used to teach the classifier target rejection.</p></header>
+    <header><span>FALSE TARGET</span><p>False targets are rejected and do not enter the landing-point determination stage.</p></header>
     <div class="challenge-project__dataset-media">
       <img src="{{ '/images/challenge-cup/dataset-false-reference.png' | relative_url }}" alt="False-target reference image embedded in the 2024 final presentation" loading="lazy" decoding="async">
       <img src="{{ '/images/challenge-cup/dataset-false-augmentations.png' | relative_url }}" alt="False-target rotation, position, and scale augmentation samples from the 2024 presentation" loading="lazy" decoding="async">
     </div>
     <figure class="challenge-project__dataset-result">
       <img src="{{ '/images/challenge-cup/target-false.gif' | relative_url }}" alt="Animated recognition sequence for a false landing target" loading="lazy" decoding="async">
-      <figcaption><strong>False-target rejection</strong><span>Invalid target filtered before landing-point calculation</span></figcaption>
     </figure>
   </article>
 </div>
