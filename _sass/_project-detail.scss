@@ -331,30 +331,58 @@
     }
   }
 
-  &__evolution {
+  &__year-nav {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin: 2rem 0 4rem;
+    gap: 1px;
+    margin: 1rem 0 5rem;
+    padding: 1px;
+    background: var(--aircraft-line);
+
+    a {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: .35rem 1rem;
+      padding: 1.4rem;
+      color: var(--aircraft-ink) !important;
+      background: #fff;
+      text-decoration: none !important;
+    }
+    a:hover { background: var(--challenge-soft); }
+
+    span {
+      grid-row: 1 / 3;
+      color: var(--aircraft-green);
+      font-size: .65em;
+      font-weight: 600;
+      letter-spacing: .08em;
+    }
+    strong { font-size: .9em; }
+    small { color: var(--aircraft-muted); font-size: .68em; line-height: 1.5; }
+  }
+
+  &__year {
+    margin: 0 0 6rem;
+    scroll-margin-top: 5rem;
+
+    > h3 { margin-top: 3rem; font-size: 1em; }
+  }
+
+  &__year-header {
+    margin: 0 0 3rem;
+    padding: 1.75rem 0 2rem;
     border-top: 1px solid var(--aircraft-ink);
     border-bottom: 1px solid var(--aircraft-line);
 
-    article { padding: 1.4rem 1.5rem 1.7rem 0; }
-    article + article {
-      padding-right: 0;
-      padding-left: 1.5rem;
-      border-left: 1px solid var(--aircraft-line);
+    span { color: var(--aircraft-green); font-size: .65em; font-weight: 600; letter-spacing: .1em; }
+    h2 {
+      margin: .85rem 0 .7rem;
+      padding: 0;
+      border: 0;
+      font-size: 1.55em;
+      line-height: 1.25;
     }
-
-    span {
-      color: var(--aircraft-green);
-      font-size: .63em;
-      font-weight: 600;
-      letter-spacing: .07em;
-    }
-
-    h3 { margin: 1.8rem 0 .7rem; font-size: 1em; }
-    p, li { color: var(--aircraft-muted); font-size: .78em; line-height: 1.65; }
-    ul { margin-bottom: 0; }
+    p { max-width: 52rem; margin: 0; color: var(--aircraft-muted); font-size: .82em; line-height: 1.7; }
   }
 
   &__pipeline {
@@ -389,6 +417,8 @@
       line-height: 1.55;
     }
   }
+
+  &__pipeline--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
   &__section-note {
     max-width: 48rem;
@@ -466,23 +496,8 @@
     }
   }
 
-  &__award {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(14rem, .8fr);
-    gap: 2rem;
-    align-items: center;
-    margin: 2rem 0 3rem;
-    padding: 1rem 0;
-    border-top: 1px solid var(--aircraft-ink);
-    border-bottom: 1px solid var(--aircraft-line);
-
-    figure { min-width: 0; margin: 0; }
-    img { display: block; width: 100%; height: auto; border: 1px solid var(--aircraft-line); }
-    figcaption { padding-top: .6rem; color: var(--aircraft-muted); font-size: .68em; }
-    span { color: var(--aircraft-green); font-size: .63em; font-weight: 600; letter-spacing: .08em; }
-    h3 { margin: 1.2rem 0 .7rem; }
-    p { margin: 0; color: var(--aircraft-muted); font-size: .8em; line-height: 1.65; }
-  }
+  &__metrics--single { grid-template-columns: minmax(0, 1fr); }
+  &__metrics--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
   &__github {
     display: flex;
@@ -516,18 +531,11 @@
 
   @media (max-width: 48em) {
     &__hero,
-    &__evolution,
+    &__year-nav,
     &__pipeline,
     &__demo-grid,
     &__detection-strip,
-    &__metrics,
-    &__award { grid-template-columns: 1fr; }
-
-    &__evolution article + article {
-      padding-left: 0;
-      border-top: 1px solid var(--aircraft-line);
-      border-left: 0;
-    }
+    &__metrics { grid-template-columns: 1fr; }
 
     &__github { flex-direction: column; align-items: flex-start; }
   }

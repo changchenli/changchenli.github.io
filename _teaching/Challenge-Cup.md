@@ -1,10 +1,10 @@
 ---
 title: "Challenge Cup · Autonomous UAV Search and Rescue"
-excerpt: "Computer-vision, localization, and mission-planning algorithms for autonomous single- and dual-UAV rescue systems."
+excerpt: "Computer-vision, localization, and mission-planning algorithms developed across the 2024 and 2025 Challenge Cup competitions."
 collection: teaching
 type: "Computer Vision Group Leader"
 permalink: /teaching/Challenge-Cup/
-venue: "National First Prize · 2024"
+venue: "Challenge Cup · 2024 / 2025"
 date: 2024-03-10
 location: "Beijing, China"
 toc: true
@@ -15,97 +15,108 @@ comments: false
 
 <div class="aircraft-project challenge-project" markdown="1">
 
-<p class="aircraft-project__lead">A two-stage research effort in autonomous aerial rescue: a 2024 sea-rescue system combining intelligent flight control with visual target recognition, followed by a 2025 dual-UAV architecture for wide-area search, target localization, and close-range response.</p>
+<p class="aircraft-project__lead">Two Challenge Cup projects developed in consecutive years. The 2024 entry focused on single-UAV visual recognition and autonomous landing; the 2025 entry extended the work into a dual-UAV search-and-rescue system.</p>
 
 <div class="aircraft-project__facts">
   <div><span>ROLE</span><strong>Computer Vision<br>Algorithm Development</strong></div>
   <div><span>STACK</span><strong>Python · ROS · OpenCV<br>PyTorch · MAVROS</strong></div>
 </div>
 
+<nav class="challenge-project__year-nav" aria-label="Challenge Cup project years">
+  <a href="#competition-2024"><span>01</span><strong>2024 Competition</strong><small>Single-UAV exploration and visual landing</small></a>
+  <a href="#competition-2025"><span>02</span><strong>2025 Competition</strong><small>Dual-UAV autonomous search and rescue</small></a>
+</nav>
+
+<section class="challenge-project__year challenge-project__year--2024" id="competition-2024" markdown="1">
+
+<header class="challenge-project__year-header">
+  <span>2024 · CHALLENGE CUP</span>
+  <h2>Autonomous Sea-Rescue Exploration</h2>
+  <p>A single aircraft combined route planning, flight-mode transitions, three-class target recognition, feature matching, and landing-point localization into an autonomous sea-rescue workflow.</p>
+</header>
+
+### Project Scope
+
+<div class="aircraft-project__principles">
+  <article><span>01 / NAVIGATION</span><h3>Autonomous Exploration</h3><p>Waypoint planning and fixed-wing / rotary-wing transitions supported efficient area coverage and approach.</p></article>
+  <article><span>02 / CLASSIFICATION</span><h3>Three-Class CNN</h3><p>The visual model distinguished true landing targets, false targets, and scenes without a target.</p></article>
+  <article><span>03 / MATCHING</span><h3>Feature Verification</h3><p>SIFT feature matching verified the target geometry after the initial CNN classification.</p></article>
+  <article><span>04 / LANDING</span><h3>Center Localization</h3><p>Geometric checks estimated a stable target center for the autonomous landing stage.</p></article>
+</div>
+
+### Recognition and Landing Workflow
+
+<ol class="challenge-project__pipeline challenge-project__pipeline--four">
+  <li><span>Input</span><strong>Aerial image</strong><p>Capture the current view during autonomous exploration.</p></li>
+  <li><span>Classify</span><strong>Three-class CNN</strong><p>Identify a true target, false target, or empty scene.</p></li>
+  <li><span>Verify</span><strong>SIFT matching</strong><p>Confirm the target using local visual features.</p></li>
+  <li><span>Localize</span><strong>Landing center</strong><p>Estimate and validate the geometric center used for approach.</p></li>
+</ol>
+
+### Visual Results
+
+<div class="challenge-project__demo-grid">
+  <figure>
+    <img src="{{ '/images/challenge-cup/target-true.gif' | relative_url }}" alt="Animated recognition sequence for a true landing target" loading="lazy" decoding="async">
+    <figcaption><strong>True-target recognition</strong><span>CNN classification</span></figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/images/challenge-cup/target-false.gif' | relative_url }}" alt="Animated recognition sequence for a false landing target" loading="lazy" decoding="async">
+    <figcaption><strong>False-target rejection</strong><span>CNN classification</span></figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/images/challenge-cup/landing-localization.gif' | relative_url }}" alt="Animated landing-point localization sequence" loading="lazy" decoding="async">
+    <figcaption><strong>Landing-point localization</strong><span>Feature matching and center estimation</span></figcaption>
+  </figure>
+</div>
+
+<div class="challenge-project__metrics challenge-project__metrics--single">
+  <div><span>TRAINING DATASET</span><strong>9,000+</strong><p>Multi-angle and multi-scale images used in the 2024 recognition workflow.</p></div>
+</div>
+
+</section>
+
+<section class="challenge-project__year challenge-project__year--2025" id="competition-2025" markdown="1">
+
+<header class="challenge-project__year-header">
+  <span>2025 · CHALLENGE CUP</span>
+  <h2>Dual-UAV Autonomous Search and Rescue</h2>
+  <p>A VTOL fixed-wing aircraft searched a wide area and published validated target coordinates; a quadrotor then approached the detected people in mission order for close-range response.</p>
+</header>
+
+### System Architecture
+
 <div class="challenge-project__hero">
   <figure>
-    <img src="{{ '/images/challenge-cup/rescue-red-detection.jpg' | relative_url }}" alt="Processed aerial frame showing a detected red rescue target" fetchpriority="high">
+    <img src="{{ '/images/challenge-cup/rescue-red-detection.jpg' | relative_url }}" alt="Processed aerial frame showing a detected red rescue target" loading="lazy" decoding="async">
   </figure>
   <div>
-    <span>2024 → 2025</span>
-    <h2>From visual landing to coordinated rescue</h2>
-    <p>The project evolved from single-aircraft target classification and landing-point localization into a coordinated workflow in which a VTOL fixed-wing aircraft searches a large area and passes target coordinates to a quadrotor for close-range response.</p>
+    <span>SEARCH AIRCRAFT → RESPONSE AIRCRAFT</span>
+    <h2>Coordinated wide-area rescue</h2>
+    <p>The 2025 system separated rapid high-altitude search from precise low-altitude response. ROS messaging connected perception, world-coordinate localization, and mission-state exchange between the two aircraft.</p>
   </div>
 </div>
 
-## Project Overview
-
-The technical work connects perception, localization, flight control, and inter-aircraft communication into one autonomous mission. Instead of presenting source code directly on this page, the portfolio focuses on the system logic, visual evidence, and measured outcomes; the implementation will be maintained separately on GitHub.
-
-<div class="aircraft-project__principles">
-  <article><span>01 / SEARCH</span><h3>Wide-Area Coverage</h3><p>Waypoint planning and VTOL mode control support rapid scanning while respecting restricted areas.</p></article>
-  <article><span>02 / PERCEPTION</span><h3>Multi-Stage Vision</h3><p>HSV screening, SIFT descriptors, and Harris corners adapt the pipeline to targets with different colors and textures.</p></article>
-  <article><span>03 / LOCALIZATION</span><h3>Geometric Positioning</h3><p>Camera calibration, pose transforms, and geometric validation convert image detections into reliable world coordinates.</p></article>
-  <article><span>04 / COORDINATION</span><h3>Dual-UAV Response</h3><p>ROS messaging connects long-range search with precise low-altitude inspection and response.</p></article>
-</div>
-
-## 01 · Project Evolution
-
-<div class="challenge-project__evolution">
-  <article>
-    <span>2024 · NATIONAL FIRST PRIZE</span>
-    <h3>Autonomous Sea-Rescue Exploration</h3>
-    <p>A single-aircraft workflow combined route planning, fixed-wing and rotary-wing mode transitions, three-class CNN target recognition, SIFT feature matching, and landing-point localization.</p>
-    <ul>
-      <li>True target / false target / no target classification</li>
-      <li>Visual landing-point center estimation</li>
-      <li>Confidence and geometric plausibility checks</li>
-    </ul>
-  </article>
-  <article>
-    <span>2025 · SECOND ITERATION</span>
-    <h3>Dual-UAV Autonomous Search and Rescue</h3>
-    <p>A VTOL fixed-wing aircraft performs high-altitude search and publishes target coordinates; a quadrotor then approaches the detected people in mission order for close-range confirmation.</p>
-    <ul>
-      <li>Red, yellow, and white rescue-target screening</li>
-      <li>Restricted-area-aware waypoint execution</li>
-      <li>ROS-based coordinate and mission-state exchange</li>
-    </ul>
-  </article>
-</div>
-
-## 02 · Autonomous Mission Workflow
+### Autonomous Mission Workflow
 
 <div class="aircraft-project__sequence challenge-project__mission">
-  <div><span>01</span><strong>Search</strong><p>The VTOL aircraft follows a waypoint route to cover the target area efficiently.</p></div>
-  <div><span>02</span><strong>Detect</strong><p>Fast color screening narrows the image before feature-level recognition and localization.</p></div>
-  <div><span>03</span><strong>Share</strong><p>Validated world coordinates are published through ROS for the response aircraft.</p></div>
-  <div><span>04</span><strong>Respond</strong><p>The quadrotor approaches each target and maintains the required low-altitude operating envelope.</p></div>
+  <div><span>01</span><strong>Search</strong><p>The VTOL aircraft follows a restricted-area-aware waypoint route.</p></div>
+  <div><span>02</span><strong>Detect</strong><p>Color screening and feature matching identify rescue targets.</p></div>
+  <div><span>03</span><strong>Share</strong><p>Validated world coordinates are published through ROS.</p></div>
+  <div><span>04</span><strong>Respond</strong><p>The quadrotor approaches each target for close-range action.</p></div>
 </div>
 
 ### Perception and Localization Pipeline
 
 <ol class="challenge-project__pipeline">
-  <li><span>Input</span><strong>Aerial image and vehicle pose</strong><p>Synchronize camera data with the current aircraft state.</p></li>
+  <li><span>Input</span><strong>Image and vehicle pose</strong><p>Synchronize camera data with the current aircraft state.</p></li>
   <li><span>Screen</span><strong>HSV color filtering</strong><p>Reject empty frames and extract a compact region of interest.</p></li>
-  <li><span>Match</span><strong>SIFT or Harris + SIFT</strong><p>Select the feature strategy according to target geometry and imaging conditions.</p></li>
-  <li><span>Validate</span><strong>Geometric confidence checks</strong><p>Filter implausible quadrilaterals and unstable center estimates.</p></li>
-  <li><span>Transform</span><strong>Pixel to world coordinates</strong><p>Apply the camera model and vehicle pose before publishing the target position.</p></li>
+  <li><span>Match</span><strong>SIFT or Harris + SIFT</strong><p>Select the feature strategy according to target geometry.</p></li>
+  <li><span>Validate</span><strong>Geometric checks</strong><p>Filter implausible contours and unstable center estimates.</p></li>
+  <li><span>Transform</span><strong>World coordinates</strong><p>Apply camera and vehicle poses before publishing the target.</p></li>
 </ol>
 
-## 03 · Visual Recognition Demos
-
-<p class="challenge-project__section-note">These starter assets establish the final media layout. The 2025 detection sequences will later be exported as lightweight web animations and placed in the same frames.</p>
-
-<div class="challenge-project__demo-grid">
-  <figure>
-    <img src="{{ '/images/challenge-cup/target-true.gif' | relative_url }}" alt="Animated recognition sequence for a true landing target" loading="lazy" decoding="async">
-    <figcaption><strong>True-target recognition</strong><span>2024 · CNN classification</span></figcaption>
-  </figure>
-  <figure>
-    <img src="{{ '/images/challenge-cup/target-false.gif' | relative_url }}" alt="Animated recognition sequence for a false landing target" loading="lazy" decoding="async">
-    <figcaption><strong>False-target rejection</strong><span>2024 · CNN classification</span></figcaption>
-  </figure>
-  <figure>
-    <img src="{{ '/images/challenge-cup/landing-localization.gif' | relative_url }}" alt="Animated landing-point localization sequence" loading="lazy" decoding="async">
-    <figcaption><strong>Landing-point localization</strong><span>2024 · feature matching and center estimation</span></figcaption>
-  </figure>
-</div>
+### Detection Results
 
 <div class="challenge-project__detection-strip">
   <figure><img src="{{ '/images/challenge-cup/rescue-red-detection.jpg' | relative_url }}" alt="Detected red rescue target" loading="lazy" decoding="async"><figcaption>Red target</figcaption></figure>
@@ -113,9 +124,9 @@ The technical work connects perception, localization, flight control, and inter-
   <figure><img src="{{ '/images/challenge-cup/rescue-white-detection.jpg' | relative_url }}" alt="Detected white rescue target" loading="lazy" decoding="async"><figcaption>White target</figcaption></figure>
 </div>
 
-## 04 · Performance Snapshot
+### Performance Snapshot
 
-<p class="challenge-project__section-note">The table below records the current report-level benchmark. A unified reproducible benchmark will replace it when the public code package is finalized.</p>
+<p class="challenge-project__section-note">Report-level results from the 2025 perception workflow. A unified reproducible benchmark will replace them when the public code package is finalized.</p>
 
 <div class="challenge-project__table-wrap" markdown="1">
 
@@ -127,25 +138,14 @@ The technical work connects perception, localization, flight control, and inter-
 
 </div>
 
-<div class="challenge-project__metrics">
-  <div><span>DATASET</span><strong>9,000+</strong><p>Multi-angle and multi-scale training images in the 2024 recognition workflow.</p></div>
-  <div><span>OPTIMIZATION</span><strong>3–4×</strong><p>Reported overall image-processing speedup after color pre-screening and ROI reduction.</p></div>
+<div class="challenge-project__metrics challenge-project__metrics--two">
+  <div><span>OPTIMIZATION</span><strong>3–4×</strong><p>Reported image-processing speedup after color pre-screening and ROI reduction.</p></div>
   <div><span>LOCALIZATION</span><strong>−90%</strong><p>Reported reduction in coordinate error in the optimized simulation workflow.</p></div>
 </div>
 
-## 05 · Award and Repository
+</section>
 
-<div class="challenge-project__award">
-  <figure>
-    <img src="{{ '/images/challenge-cup/award-2024-first-prize.png' | relative_url }}" alt="2024 Challenge Cup national first-prize certificate" loading="lazy" decoding="async">
-    <figcaption>19th Challenge Cup · Unveiling and Leading Special Competition · National First Prize</figcaption>
-  </figure>
-  <div>
-    <span>VERIFIED RESULT</span>
-    <h3>National First Prize</h3>
-    <p>The 2024 project, <em>Deep-Learning-Based Autonomous UAV Exploration and Intelligent Flight Control</em>, received a national first prize in the Challenge Cup special competition.</p>
-  </div>
-</div>
+## 03 · Code Repository
 
 <div class="challenge-project__github">
   <div>
