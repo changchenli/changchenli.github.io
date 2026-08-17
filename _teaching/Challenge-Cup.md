@@ -99,13 +99,6 @@ comments: false
 
 </div>
 
-<div class="challenge-project__metrics challenge-project__metrics--four">
-  <div><span>DATASET</span><strong>9,000+</strong><p>Multi-angle and multi-scale training images.</p></div>
-  <div><span>NETWORK</span><strong>4</strong><p>Convolution layers in the reported CNN structure.</p></div>
-  <div><span>TRAINING</span><strong>20</strong><p>Maximum epochs in the PPT configuration.</p></div>
-  <div><span>SIMULATION</span><strong>100%</strong><p>PPT-reported recognition performance in the virtual environment.</p></div>
-</div>
-
 </div>
 
 <div class="challenge-project__workstream" id="landing-recognition-2024" markdown="1">
@@ -142,17 +135,7 @@ comments: false
   </figure>
 </div>
 
-<div class="challenge-project__landing-result">
-  <div>
-    <span>REPORTED IMPROVEMENT</span>
-    <strong>&gt;50%</strong>
-  </div>
-  <p>The final presentation reports that adding the confidence module improved landing-box precision by more than 50%. Coordinate output is withheld when valid landing-point evidence is unavailable.</p>
 </div>
-
-</div>
-
-<p class="challenge-project__source-note">Technical route, training configuration, and reported results summarized from the 2024 final presentation, <em>Deep-Learning-Based Autonomous UAV Exploration and Intelligent Flight Control</em>.</p>
 
 </section>
 
