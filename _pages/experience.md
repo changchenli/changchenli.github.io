@@ -16,12 +16,12 @@ author_profile: true
 
 ## Competitions
 
-### Challenge Cup Science & Technology Competition
+### [Challenge Cup Science & Technology Competition]({{ "/teaching/Challenge-Cup/" | relative_url }})
 *Computer Vision Group Leader · National First Prize · 2024*
 
-- Developed a customized ComplexCNN target-recognition model with **99%+ accuracy**.
-- Built a SIFT-based feature-matching pipeline with **95% localization accuracy**.
-- Reduced average processing time per image by approximately **67%**.
+- Developed the computer-vision pipeline for autonomous UAV target recognition and localization.
+- Combined color screening, SIFT/Harris feature matching, and geometric validation.
+- Extended the workflow from single-UAV sea rescue to dual-UAV coordinated search and response.
 
 ### [China Undergraduate Mathematical Contest in Modeling]({{ "/portfolio/cumcm-2024/" | relative_url }})
 *Team Leader · Provincial Third Prize · 2024*

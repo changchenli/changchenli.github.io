@@ -280,6 +280,259 @@
   }
 }
 
+/* Challenge Cup autonomous-rescue detail page */
+.challenge-project {
+  --aircraft-ink: #13232b;
+  --aircraft-muted: #61717a;
+  --aircraft-line: #d6e0e4;
+  --aircraft-green: #176f87;
+  --challenge-soft: #edf6f8;
+
+  &__hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(15rem, .65fr);
+    gap: 2rem;
+    align-items: center;
+    margin: 0 0 4.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--aircraft-ink);
+    border-bottom: 1px solid var(--aircraft-line);
+
+    figure { min-width: 0; margin: 0; }
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--aircraft-line);
+      object-fit: cover;
+    }
+
+    span {
+      color: var(--aircraft-green);
+      font-size: .65em;
+      font-weight: 600;
+      letter-spacing: .09em;
+    }
+
+    h2 {
+      margin: .8rem 0 1rem;
+      padding: 0;
+      border: 0;
+      font-size: 1.35em;
+      line-height: 1.25;
+    }
+
+    p {
+      margin: 0;
+      color: var(--aircraft-muted);
+      font-size: .82em;
+      line-height: 1.7;
+    }
+  }
+
+  &__evolution {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 2rem 0 4rem;
+    border-top: 1px solid var(--aircraft-ink);
+    border-bottom: 1px solid var(--aircraft-line);
+
+    article { padding: 1.4rem 1.5rem 1.7rem 0; }
+    article + article {
+      padding-right: 0;
+      padding-left: 1.5rem;
+      border-left: 1px solid var(--aircraft-line);
+    }
+
+    span {
+      color: var(--aircraft-green);
+      font-size: .63em;
+      font-weight: 600;
+      letter-spacing: .07em;
+    }
+
+    h3 { margin: 1.8rem 0 .7rem; font-size: 1em; }
+    p, li { color: var(--aircraft-muted); font-size: .78em; line-height: 1.65; }
+    ul { margin-bottom: 0; }
+  }
+
+  &__pipeline {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1px;
+    margin: 1.7rem 0 4rem;
+    padding: 1px;
+    list-style: none;
+    background: var(--aircraft-line);
+
+    li {
+      min-width: 0;
+      padding: 1.15rem;
+      background: #fff;
+    }
+
+    span, strong { display: block; }
+    span {
+      margin-bottom: 1.8rem;
+      color: var(--aircraft-green);
+      font-size: .62em;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    strong { font-size: .82em; line-height: 1.4; }
+    p {
+      margin: .55rem 0 0;
+      color: var(--aircraft-muted);
+      font-size: .7em;
+      line-height: 1.55;
+    }
+  }
+
+  &__section-note {
+    max-width: 48rem;
+    color: var(--aircraft-muted);
+    font-size: .82em;
+    line-height: 1.65;
+  }
+
+  &__demo-grid,
+  &__detection-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+
+    figure { min-width: 0; margin: 0; }
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--aircraft-line);
+      background: var(--challenge-soft);
+      object-fit: cover;
+    }
+    figcaption {
+      padding-top: .6rem;
+      color: var(--aircraft-muted);
+      font-size: .7em;
+      line-height: 1.5;
+    }
+  }
+
+  &__demo-grid {
+    margin: 1.8rem 0 2rem;
+    figcaption strong, figcaption span { display: block; }
+    figcaption strong { color: var(--aircraft-ink); font-size: 1.08em; }
+  }
+
+  &__detection-strip {
+    margin: 0 0 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--aircraft-line);
+    figcaption { color: var(--aircraft-green); letter-spacing: .05em; text-transform: uppercase; }
+  }
+
+  &__table-wrap {
+    overflow-x: auto;
+    margin: 1.4rem 0 2rem;
+
+    table { min-width: 38rem; margin: 0; }
+    th { color: var(--aircraft-green); }
+  }
+
+  &__metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    margin: 0 0 4rem;
+    border: 1px solid var(--aircraft-line);
+    background: var(--aircraft-line);
+
+    div { padding: 1.35rem; background: var(--challenge-soft); }
+    span, strong { display: block; }
+    span {
+      margin-bottom: 1.2rem;
+      color: var(--aircraft-green);
+      font-size: .62em;
+      letter-spacing: .08em;
+    }
+    strong { font-size: 1.85em; line-height: 1; }
+    p {
+      margin: .65rem 0 0;
+      color: var(--aircraft-muted);
+      font-size: .72em;
+      line-height: 1.55;
+    }
+  }
+
+  &__award {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(14rem, .8fr);
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem 0 3rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--aircraft-ink);
+    border-bottom: 1px solid var(--aircraft-line);
+
+    figure { min-width: 0; margin: 0; }
+    img { display: block; width: 100%; height: auto; border: 1px solid var(--aircraft-line); }
+    figcaption { padding-top: .6rem; color: var(--aircraft-muted); font-size: .68em; }
+    span { color: var(--aircraft-green); font-size: .63em; font-weight: 600; letter-spacing: .08em; }
+    h3 { margin: 1.2rem 0 .7rem; }
+    p { margin: 0; color: var(--aircraft-muted); font-size: .8em; line-height: 1.65; }
+  }
+
+  &__github {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 2rem;
+    padding: 1.4rem;
+    border: 1px solid var(--aircraft-line);
+    background: var(--challenge-soft);
+
+    div { max-width: 44rem; }
+    span { color: var(--aircraft-green); font-size: .62em; font-weight: 600; letter-spacing: .08em; }
+    h3 { margin: .65rem 0 .45rem; font-size: 1em; }
+    p { margin: 0; color: var(--aircraft-muted); font-size: .75em; line-height: 1.6; }
+    a {
+      flex: 0 0 auto;
+      padding: .75rem 1rem;
+      border: 1px solid var(--aircraft-green);
+      color: var(--aircraft-green) !important;
+      font-size: .75em;
+      font-weight: 600;
+      text-decoration: none !important;
+    }
+    a:hover { color: #fff !important; background: var(--aircraft-green); }
+  }
+
+  @media (max-width: 64em) {
+    &__pipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 48em) {
+    &__hero,
+    &__evolution,
+    &__pipeline,
+    &__demo-grid,
+    &__detection-strip,
+    &__metrics,
+    &__award { grid-template-columns: 1fr; }
+
+    &__evolution article + article {
+      padding-left: 0;
+      border-top: 1px solid var(--aircraft-line);
+      border-left: 0;
+    }
+
+    &__github { flex-direction: column; align-items: flex-start; }
+  }
+}
+
 /* SAIC smart-chassis detail page */
 .saic-project {
   --aircraft-ink: #14212b;
