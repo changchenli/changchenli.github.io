@@ -69,6 +69,10 @@ comments: false
       <img src="{{ '/images/challenge-cup/dataset-true-reference.jpg' | relative_url }}" alt="True-target reference image embedded in the 2024 final presentation" loading="lazy" decoding="async">
       <img src="{{ '/images/challenge-cup/dataset-true-augmentations.png' | relative_url }}" alt="True-target rotation, position, and scale augmentation samples from the 2024 presentation" loading="lazy" decoding="async">
     </div>
+    <figure class="challenge-project__dataset-result">
+      <img src="{{ '/images/challenge-cup/target-true.gif' | relative_url }}" alt="Animated recognition sequence for a true landing target" loading="lazy" decoding="async">
+      <figcaption><strong>True-target recognition</strong><span>Valid target passed to the next mission stage</span></figcaption>
+    </figure>
   </article>
   <article>
     <header><span>FALSE TARGET</span><strong>Negative samples</strong><p>Alternative marker and representative augmented views used to teach the classifier target rejection.</p></header>
@@ -76,6 +80,10 @@ comments: false
       <img src="{{ '/images/challenge-cup/dataset-false-reference.png' | relative_url }}" alt="False-target reference image embedded in the 2024 final presentation" loading="lazy" decoding="async">
       <img src="{{ '/images/challenge-cup/dataset-false-augmentations.png' | relative_url }}" alt="False-target rotation, position, and scale augmentation samples from the 2024 presentation" loading="lazy" decoding="async">
     </div>
+    <figure class="challenge-project__dataset-result">
+      <img src="{{ '/images/challenge-cup/target-false.gif' | relative_url }}" alt="Animated recognition sequence for a false landing target" loading="lazy" decoding="async">
+      <figcaption><strong>False-target rejection</strong><span>Invalid target filtered before landing-point calculation</span></figcaption>
+    </figure>
   </article>
 </div>
 
@@ -91,19 +99,6 @@ comments: false
 | Learning rate | 0.0001 | Adam optimizer step size |
 | Objective | Cross-entropy loss | Three-class classification objective |
 
-</div>
-
-#### Recognition Results
-
-<div class="challenge-project__demo-grid challenge-project__demo-grid--two">
-  <figure>
-    <img src="{{ '/images/challenge-cup/target-true.gif' | relative_url }}" alt="Animated recognition sequence for a true landing target" loading="lazy" decoding="async">
-    <figcaption><strong>True-target recognition</strong><span>Valid target passed to the next mission stage</span></figcaption>
-  </figure>
-  <figure>
-    <img src="{{ '/images/challenge-cup/target-false.gif' | relative_url }}" alt="Animated recognition sequence for a false landing target" loading="lazy" decoding="async">
-    <figcaption><strong>False-target rejection</strong><span>Invalid target filtered before landing-point calculation</span></figcaption>
-  </figure>
 </div>
 
 <div class="challenge-project__metrics challenge-project__metrics--four">
