@@ -129,16 +129,16 @@ comments: false
 
 <div class="challenge-project__localization-grid">
   <figure>
-    <img src="{{ '/images/challenge-cup/landing-localization.gif' | relative_url }}" alt="Animated landing-point localization sequence" loading="lazy" decoding="async">
-    <figcaption><strong>Center confirmation</strong><span>Template matching and image-center estimation</span></figcaption>
-  </figure>
-  <figure>
     <img src="{{ '/images/challenge-cup/landing-geometry-color.gif' | relative_url }}" alt="Animated geometric validation and color-block detection sequence from the 2024 presentation" loading="lazy" decoding="async">
-    <figcaption><strong>Geometry and color validation</strong><span>Candidate boundary and marker-color checks</span></figcaption>
+    <figcaption><strong>Geometry and color validation</strong><span>Two complementary checks improve recognition accuracy and stability.</span></figcaption>
   </figure>
   <figure>
-    <img src="{{ '/images/challenge-cup/landing-confidence-improved.gif' | relative_url }}" alt="Animated improved landing-point sequence after adding the confidence module" loading="lazy" decoding="async">
-    <figcaption><strong>Confidence-module improvement</strong><span>Improved result shown in the final presentation</span></figcaption>
+    <img src="{{ '/images/challenge-cup/landing-high-altitude.gif' | relative_url }}" alt="Animated landing-target recognition from a higher flight altitude" loading="lazy" decoding="async">
+    <figcaption><strong>High-altitude detection</strong><span>Landing-target recognition from a higher flight altitude.</span></figcaption>
+  </figure>
+  <figure>
+    <img src="{{ '/images/challenge-cup/landing-confidence-improved.gif' | relative_url }}" alt="Animated landing-target recognition from a lower flight altitude" loading="lazy" decoding="async">
+    <figcaption><strong>Low-altitude detection</strong><span>Refined landing-target recognition from a lower flight altitude.</span></figcaption>
   </figure>
 </div>
 
