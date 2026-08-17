@@ -74,7 +74,7 @@ comments: false
     </figure>
   </article>
   <article>
-    <header><span>FALSE TARGET</span><p>False targets are rejected and do not enter the landing-point determination stage.</p></header>
+    <header><span>FALSE TARGET</span><p>False targets do not proceed to landing-point determination.</p></header>
     <div class="challenge-project__dataset-media">
       <img src="{{ '/images/challenge-cup/dataset-false-reference.png' | relative_url }}" alt="False-target reference image embedded in the 2024 final presentation" loading="lazy" decoding="async">
       <img src="{{ '/images/challenge-cup/dataset-false-augmentations.png' | relative_url }}" alt="False-target rotation, position, and scale augmentation samples from the 2024 presentation" loading="lazy" decoding="async">
