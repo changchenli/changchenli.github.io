@@ -35,44 +35,99 @@ comments: false
   <p>A single aircraft combined route planning, flight-mode transitions, three-class target recognition, feature matching, and landing-point localization into an autonomous sea-rescue workflow.</p>
 </header>
 
-### Project Scope
-
-<div class="aircraft-project__principles">
-  <article><span>01 / NAVIGATION</span><h3>Autonomous Exploration</h3><p>Waypoint planning and fixed-wing / rotary-wing transitions supported efficient area coverage and approach.</p></article>
-  <article><span>02 / CLASSIFICATION</span><h3>Three-Class CNN</h3><p>The visual model distinguished true landing targets, false targets, and scenes without a target.</p></article>
-  <article><span>03 / MATCHING</span><h3>Feature Verification</h3><p>SIFT feature matching verified the target geometry after the initial CNN classification.</p></article>
-  <article><span>04 / LANDING</span><h3>Center Localization</h3><p>Geometric checks estimated a stable target center for the autonomous landing stage.</p></article>
+<div class="challenge-project__workstream-index">
+  <div><span>01</span><strong>True / False Target Recognition</strong><p>Train a compact CNN to distinguish valid targets, false targets, and empty scenes.</p></div>
+  <div><span>02</span><strong>Landing-Point Recognition</strong><p>Use feature and geometric validation to locate a trustworthy landing center.</p></div>
 </div>
 
-### Recognition and Landing Workflow
+<div class="challenge-project__workstream" id="target-recognition-2024" markdown="1">
 
-<ol class="challenge-project__pipeline challenge-project__pipeline--four">
-  <li><span>Input</span><strong>Aerial image</strong><p>Capture the current view during autonomous exploration.</p></li>
-  <li><span>Classify</span><strong>Three-class CNN</strong><p>Identify a true target, false target, or empty scene.</p></li>
-  <li><span>Verify</span><strong>SIFT matching</strong><p>Confirm the target using local visual features.</p></li>
-  <li><span>Localize</span><strong>Landing center</strong><p>Estimate and validate the geometric center used for approach.</p></li>
+<header class="challenge-project__workstream-header">
+  <span>2024 WORKSTREAM 01</span>
+  <h3>True / False Target Recognition</h3>
+  <p>The model classifies each aerial frame into three outcomes: true target, false target, or no target. The presentation emphasizes viewpoint and scale augmentation so recognition remains stable as the aircraft approaches.</p>
+</header>
+
+#### Technical Route
+
+<ol class="challenge-project__pipeline">
+  <li><span>Dataset</span><strong>9,000+ images</strong><p>Generate multi-angle and multi-scale samples for true and false targets.</p></li>
+  <li><span>Encode</span><strong>Four convolution layers</strong><p>Extract progressively higher-level visual features from 150 × 150 RGB input.</p></li>
+  <li><span>Compress</span><strong>2 × 2 max pooling</strong><p>Reduce each feature map after convolution to control computation.</p></li>
+  <li><span>Optimize</span><strong>Cross-entropy + Adam</strong><p>Train the three-class classifier with a compact optimization setup.</p></li>
+  <li><span>Decide</span><strong>Confidence validation</strong><p>Only pass sufficiently confident detections to the landing workflow.</p></li>
 </ol>
 
-### Visual Results
+#### Training Configuration
 
-<div class="challenge-project__demo-grid">
+<div class="challenge-project__table-wrap challenge-project__table-wrap--compact" markdown="1">
+
+| Training item | PPT configuration | Portfolio interpretation |
+| --- | ---: | --- |
+| Training device | GPU preferred; CPU supported | Supports accelerated training and portable execution |
+| Maximum epochs | 20 | Compact convergence window used in the reported experiment |
+| Batch size | 30 | Mini-batch optimization |
+| Learning rate | 0.0001 | Adam optimizer step size |
+| Objective | Cross-entropy loss | Three-class classification objective |
+
+</div>
+
+#### Recognition Results
+
+<div class="challenge-project__demo-grid challenge-project__demo-grid--two">
   <figure>
     <img src="{{ '/images/challenge-cup/target-true.gif' | relative_url }}" alt="Animated recognition sequence for a true landing target" loading="lazy" decoding="async">
-    <figcaption><strong>True-target recognition</strong><span>CNN classification</span></figcaption>
+    <figcaption><strong>True-target recognition</strong><span>Valid target passed to the next mission stage</span></figcaption>
   </figure>
   <figure>
     <img src="{{ '/images/challenge-cup/target-false.gif' | relative_url }}" alt="Animated recognition sequence for a false landing target" loading="lazy" decoding="async">
-    <figcaption><strong>False-target rejection</strong><span>CNN classification</span></figcaption>
-  </figure>
-  <figure>
-    <img src="{{ '/images/challenge-cup/landing-localization.gif' | relative_url }}" alt="Animated landing-point localization sequence" loading="lazy" decoding="async">
-    <figcaption><strong>Landing-point localization</strong><span>Feature matching and center estimation</span></figcaption>
+    <figcaption><strong>False-target rejection</strong><span>Invalid target filtered before landing-point calculation</span></figcaption>
   </figure>
 </div>
 
-<div class="challenge-project__metrics challenge-project__metrics--single">
-  <div><span>TRAINING DATASET</span><strong>9,000+</strong><p>Multi-angle and multi-scale images used in the 2024 recognition workflow.</p></div>
+<div class="challenge-project__metrics challenge-project__metrics--four">
+  <div><span>DATASET</span><strong>9,000+</strong><p>Multi-angle and multi-scale training images.</p></div>
+  <div><span>NETWORK</span><strong>4</strong><p>Convolution layers in the reported CNN structure.</p></div>
+  <div><span>TRAINING</span><strong>20</strong><p>Maximum epochs in the PPT configuration.</p></div>
+  <div><span>SIMULATION</span><strong>100%</strong><p>PPT-reported recognition performance in the virtual environment.</p></div>
 </div>
+
+</div>
+
+<div class="challenge-project__workstream" id="landing-recognition-2024" markdown="1">
+
+<header class="challenge-project__workstream-header">
+  <span>2024 WORKSTREAM 02</span>
+  <h3>Landing-Point Recognition</h3>
+  <p>After a true target is confirmed, a second pipeline matches the landing marker, estimates its center, and rejects geometrically implausible regions before a coordinate is released to the flight controller.</p>
+</header>
+
+#### Technical Route
+
+<ol class="challenge-project__pipeline challenge-project__pipeline--four">
+  <li><span>Match</span><strong>SIFT feature matching</strong><p>Locate the landing marker against a stored reference template.</p></li>
+  <li><span>Center</span><strong>Template-center estimate</strong><p>Use the matched region to obtain an initial image-center coordinate.</p></li>
+  <li><span>Validate</span><strong>Geometry + color blocks</strong><p>Check the candidate boundary and marker appearance for plausibility.</p></li>
+  <li><span>Output</span><strong>Confidence-gated coordinate</strong><p>Publish the landing center only when the validation criteria are satisfied.</p></li>
+</ol>
+
+#### Localization Result
+
+<div class="challenge-project__landing-evidence">
+  <figure>
+    <img src="{{ '/images/challenge-cup/landing-localization.gif' | relative_url }}" alt="Animated landing-point localization sequence" loading="lazy" decoding="async">
+    <figcaption><strong>Landing-point localization</strong><span>SIFT matching, center estimation, and geometric validation</span></figcaption>
+  </figure>
+  <div>
+    <span>REPORTED IMPROVEMENT</span>
+    <strong>&gt;50%</strong>
+    <p>The final presentation reports that adding the confidence module improved landing-box precision by more than 50%. Coordinate output is withheld when valid landing-point evidence is unavailable.</p>
+  </div>
+</div>
+
+</div>
+
+<p class="challenge-project__source-note">Technical route, training configuration, and reported results summarized from the 2024 final presentation, <em>Deep-Learning-Based Autonomous UAV Exploration and Intelligent Flight Control</em>.</p>
 
 </section>
 

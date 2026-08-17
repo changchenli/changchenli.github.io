@@ -385,6 +385,37 @@
     p { max-width: 52rem; margin: 0; color: var(--aircraft-muted); font-size: .82em; line-height: 1.7; }
   }
 
+  &__workstream-index {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin: 0 0 4.5rem;
+    border: 1px solid var(--aircraft-line);
+    background: var(--aircraft-line);
+
+    div { padding: 1.35rem; background: var(--challenge-soft); }
+    span, strong { display: block; }
+    span { margin-bottom: 1.2rem; color: var(--aircraft-green); font-size: .62em; font-weight: 600; letter-spacing: .08em; }
+    strong { font-size: .9em; }
+    p { margin: .55rem 0 0; color: var(--aircraft-muted); font-size: .72em; line-height: 1.55; }
+  }
+
+  &__workstream {
+    margin: 0 0 5rem;
+    scroll-margin-top: 5rem;
+  }
+
+  &__workstream-header {
+    margin: 0 0 2.5rem;
+    padding: 1.5rem 0 1.7rem;
+    border-top: 2px solid var(--aircraft-green);
+    border-bottom: 1px solid var(--aircraft-line);
+
+    span { color: var(--aircraft-green); font-size: .62em; font-weight: 600; letter-spacing: .1em; }
+    h3 { margin: .7rem 0 .65rem; font-size: 1.25em; line-height: 1.3; }
+    p { max-width: 52rem; margin: 0; color: var(--aircraft-muted); font-size: .8em; line-height: 1.7; }
+  }
+
   &__pipeline {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -456,6 +487,8 @@
     figcaption strong { color: var(--aircraft-ink); font-size: 1.08em; }
   }
 
+  &__demo-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
   &__detection-strip {
     margin: 0 0 4rem;
     padding-top: 1rem;
@@ -470,6 +503,8 @@
     table { min-width: 38rem; margin: 0; }
     th { color: var(--aircraft-green); }
   }
+
+  &__table-wrap--compact table { min-width: 42rem; }
 
   &__metrics {
     display: grid;
@@ -498,6 +533,36 @@
 
   &__metrics--single { grid-template-columns: minmax(0, 1fr); }
   &__metrics--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  &__metrics--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+  &__landing-evidence {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(14rem, .65fr);
+    gap: 2rem;
+    align-items: center;
+    margin: 1.8rem 0 2rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--aircraft-ink);
+    border-bottom: 1px solid var(--aircraft-line);
+
+    figure { min-width: 0; margin: 0; }
+    img { display: block; width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--aircraft-line); object-fit: cover; }
+    figcaption { padding-top: .6rem; color: var(--aircraft-muted); font-size: .7em; line-height: 1.5; }
+    figcaption strong, figcaption span { display: block; }
+    figcaption strong { color: var(--aircraft-ink); }
+    > div span { color: var(--aircraft-green); font-size: .62em; font-weight: 600; letter-spacing: .08em; }
+    > div strong { display: block; margin: .8rem 0; font-size: 2.25em; line-height: 1; }
+    > div p { margin: 0; color: var(--aircraft-muted); font-size: .76em; line-height: 1.65; }
+  }
+
+  &__source-note {
+    margin: -2rem 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--aircraft-line);
+    color: var(--aircraft-muted);
+    font-size: .68em;
+    line-height: 1.55;
+  }
 
   &__github {
     display: flex;
@@ -527,15 +592,18 @@
 
   @media (max-width: 64em) {
     &__pipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    &__metrics--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 
   @media (max-width: 48em) {
     &__hero,
     &__year-nav,
+    &__workstream-index,
     &__pipeline,
     &__demo-grid,
     &__detection-strip,
-    &__metrics { grid-template-columns: 1fr; }
+    &__metrics,
+    &__landing-evidence { grid-template-columns: 1fr; }
 
     &__github { flex-direction: column; align-items: flex-start; }
   }
