@@ -60,7 +60,7 @@ comments: false
 
 #### Dataset Construction
 
-<p class="challenge-project__section-note">The training set combines two target classes with rotation, position, and scale variation. The horizontal layout below reproduces the true / false sample structure used in the 2024 final presentation.</p>
+<p class="challenge-project__section-note">The training set contains three classes: true target, false target, and no target. Target samples include rotation, position, and scale variation. The no-target class consists of ocean-only images without a target; it is included in training but omitted below to keep the two-column presentation compact.</p>
 
 <div class="challenge-project__dataset-showcase">
   <article>
