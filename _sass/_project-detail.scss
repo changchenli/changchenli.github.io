@@ -780,6 +780,8 @@
       > b { transform: rotate(90deg); justify-self: start; }
     }
 
+    &__cv-roi-pipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
     &__dataset-media { grid-template-columns: minmax(6.5rem, .55fr) minmax(0, 1.45fr); }
     &__github { flex-direction: column; align-items: flex-start; }
   }
