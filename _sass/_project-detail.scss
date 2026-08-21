@@ -532,42 +532,32 @@
     figcaption span { margin-top: .2rem; color: var(--aircraft-muted); }
   }
 
-  &__cv-roi-pipeline { margin-bottom: 1.7rem; }
+  &__cv-roi-pipeline {
+    margin: 0 0 1.15rem;
 
-  &__cv-latency-story {
+    li { padding: .9rem 1rem; }
+    span { margin-bottom: .9rem; }
+    p { margin-top: .4rem; font-size: .66em; }
+  }
+
+  &__cv-causal-strip {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(10rem, .8fr) minmax(0, 1fr);
-    gap: 1px;
-    margin: 0 0 1.7rem;
-    border: 1px solid var(--aircraft-line);
-    background: var(--aircraft-line);
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.25fr) auto minmax(0, 1fr);
+    gap: .75rem;
+    align-items: center;
+    margin: 0 0 1.2rem;
+    padding: 1rem 1.1rem;
+    border-top: 1px solid var(--aircraft-line);
+    border-bottom: 1px solid var(--aircraft-line);
 
     article {
       min-width: 0;
-      padding: 1.25rem;
-      background: #fff;
-    }
-    article.is-optimized { background: var(--challenge-soft); }
-    article span,
-    article strong {
-      display: block;
+      padding: 0;
     }
     article span { color: var(--aircraft-green); font-size: .6em; font-weight: 600; letter-spacing: .08em; }
-    article strong { margin-top: 1.15rem; font-size: 1.7em; line-height: 1; }
-    article p { margin: .65rem 0 0; color: var(--aircraft-muted); font-size: .7em; line-height: 1.55; }
-  }
-
-  &__cv-latency-chain {
-    display: grid;
-    align-content: center;
-    justify-items: center;
-    gap: .35rem;
-    padding: 1rem;
-    background: #fff;
-    text-align: center;
-
-    span { color: var(--aircraft-muted); font-size: .64em; line-height: 1.4; }
-    b { color: var(--aircraft-green); font-size: .95em; line-height: 1; }
+    article strong { display: block; margin-top: .5rem; font-size: .88em; line-height: 1.35; }
+    article p { margin: .35rem 0 0; color: var(--aircraft-muted); font-size: .64em; line-height: 1.45; }
+    > b { color: var(--aircraft-green); font-size: .95em; font-weight: 400; }
   }
 
   &__section-note {
@@ -774,7 +764,6 @@
     &__cv-feature,
     &__cv-strategy,
     &__cv-target-grid,
-    &__cv-latency-story,
     &__dataset-showcase,
     &__pipeline,
     &__demo-grid,
@@ -782,6 +771,14 @@
     &__metrics,
     &__localization-grid,
     &__landing-result { grid-template-columns: 1fr; }
+
+    &__cv-causal-strip {
+      grid-template-columns: 1fr;
+      gap: .45rem;
+      padding: .9rem 1rem;
+
+      > b { transform: rotate(90deg); justify-self: start; }
+    }
 
     &__dataset-media { grid-template-columns: minmax(6.5rem, .55fr) minmax(0, 1.45fr); }
     &__github { flex-direction: column; align-items: flex-start; }

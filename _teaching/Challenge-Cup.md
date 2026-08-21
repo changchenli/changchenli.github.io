@@ -220,22 +220,6 @@ comments: false
   <p>Leaves and multi-color interference made full-frame feature matching significantly slower. A 120–200 ms image-processing delay meant that the relative target coordinate could arrive after the aircraft attitude had changed, so the quaternion used for the absolute-coordinate transformation no longer corresponded to the image capture time.</p>
 </header>
 
-<div class="challenge-project__cv-latency-story">
-  <article>
-    <span>UNOPTIMIZED COMPLEX FRAME</span>
-    <strong>120–200 ms</strong>
-    <p>Background leaves and color interference expanded the full-frame feature search.</p>
-  </article>
-  <div class="challenge-project__cv-latency-chain">
-    <span>Delayed relative coordinate</span><b>→</b><span>Image time ≠ quaternion time</span><b>→</b><span>Absolute-coordinate error</span>
-  </div>
-  <article class="is-optimized">
-    <span>OPTIMIZED COMPLEX FRAME</span>
-    <strong>≤30 ms</strong>
-    <p>ROI-restricted processing kept coordinate and attitude data closely time-aligned.</p>
-  </article>
-</div>
-
 <ol class="challenge-project__pipeline challenge-project__pipeline--four challenge-project__cv-roi-pipeline">
   <li><span>01</span><strong>Color presence check</strong><p>Skip frames without red, yellow, or white evidence.</p></li>
   <li><span>02</span><strong>Bounding rectangle</strong><p>Extract the minimum target-supported region.</p></li>
@@ -243,18 +227,21 @@ comments: false
   <li><span>04</span><strong>Local matching</strong><p>Run feature extraction and matching only inside the ROI.</p></li>
 </ol>
 
-<div class="challenge-project__table-wrap challenge-project__table-wrap--compact" markdown="1">
-
-| Operating condition | Per-frame processing time | Coordinate consequence |
-| --- | ---: | --- |
-| Complex background, full-frame matching | 120–200 ms | Relative coordinate may be paired with a later aircraft quaternion |
-| Complex background, ROI pipeline | ≤30 ms | Image and attitude data remain closely time-aligned |
-
+<div class="challenge-project__cv-causal-strip">
+  <article><span>PROCESSING BOTTLENECK</span><strong>120–200 ms</strong><p>Leaves and multi-color interference expand full-frame matching.</p></article>
+  <b>→</b>
+  <article><span>TEMPORAL MISALIGNMENT</span><strong>Image time ≠ quaternion time</strong><p>The delayed coordinate is paired with a later aircraft attitude.</p></article>
+  <b>→</b>
+  <article><span>WORLD-FRAME EFFECT</span><strong>Coordinate drift</strong><p>The absolute-coordinate transformation accumulates a larger error.</p></article>
 </div>
 
-<div class="challenge-project__metrics challenge-project__metrics--two">
-  <div><span>COMPLEX-FRAME LATENCY</span><strong>≤30 ms</strong><p>Color screening and ROI reduction bound the processing time of interference-heavy frames.</p></div>
-  <div><span>ABSOLUTE COORDINATES</span><strong>IMPROVED</strong><p>Lower latency keeps the image-derived relative coordinate consistent with the quaternion used in the world-frame transformation.</p></div>
+<div class="challenge-project__table-wrap challenge-project__table-wrap--compact" markdown="1">
+
+| Processing path | Complex-frame latency | Image–quaternion timing | Absolute-coordinate effect |
+| --- | ---: | --- | --- |
+| Full-frame matching | 120–200 ms | Mismatched due to delayed coordinate output | Larger world-frame coordinate error |
+| ROI-restricted matching | ≤30 ms | Closely aligned with image capture time | Substantially improved coordinate accuracy |
+
 </div>
 
 </section>
