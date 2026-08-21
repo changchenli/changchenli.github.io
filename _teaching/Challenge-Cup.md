@@ -169,7 +169,7 @@ comments: false
 
 <div class="challenge-project__cv-feature challenge-project__cv-feature--media-wide">
   <figure>
-    <img src="{{ '/images/challenge-cup/cv25-high-altitude-screening.gif' | relative_url }}" alt="Alternating raw and processed high-altitude frames showing color-based screening of rescue targets" loading="lazy" decoding="async">
+    <img src="{{ '/images/challenge-cup/cv25-high-altitude-screening.gif?v=source-20260821' | relative_url }}" alt="Alternating raw and processed high-altitude frames showing color-based screening of rescue targets" loading="lazy" decoding="async">
     <figcaption>Original 100 m simulation frames alternate with the color-screening result.</figcaption>
   </figure>
   <div class="challenge-project__cv-notes">
@@ -200,9 +200,9 @@ comments: false
 </div>
 
 <div class="challenge-project__cv-target-grid">
-  <figure><img src="{{ '/images/challenge-cup/cv25-red-feature-matching.gif' | relative_url }}" alt="Red rescue target feature-matching sequence" loading="lazy" decoding="async"><figcaption><strong>Red target</strong><span>Symmetry-aware structural matching</span></figcaption></figure>
-  <figure><img src="{{ '/images/challenge-cup/cv25-yellow-feature-matching.gif' | relative_url }}" alt="Yellow rescue target feature-matching sequence" loading="lazy" decoding="async"><figcaption><strong>Yellow target</strong><span>Stable matching across viewpoint change</span></figcaption></figure>
-  <figure><img src="{{ '/images/challenge-cup/cv25-white-feature-matching.gif' | relative_url }}" alt="White rescue target feature-matching sequence" loading="lazy" decoding="async"><figcaption><strong>White target</strong><span>Recognition under reduced color contrast</span></figcaption></figure>
+  <figure><img src="{{ '/images/challenge-cup/cv25-red-feature-matching.gif?v=source-20260821' | relative_url }}" alt="Red rescue target feature-matching sequence" loading="lazy" decoding="async"><figcaption><strong>Red target</strong><span>Symmetry-aware structural matching</span></figcaption></figure>
+  <figure><img src="{{ '/images/challenge-cup/cv25-yellow-feature-matching.gif?v=source-20260821' | relative_url }}" alt="Yellow rescue target feature-matching sequence" loading="lazy" decoding="async"><figcaption><strong>Yellow target</strong><span>Stable matching across viewpoint change</span></figcaption></figure>
+  <figure><img src="{{ '/images/challenge-cup/cv25-white-feature-matching.gif?v=source-20260821' | relative_url }}" alt="White rescue target feature-matching sequence" loading="lazy" decoding="async"><figcaption><strong>White target</strong><span>Recognition under reduced color contrast</span></figcaption></figure>
 </div>
 
 <div class="challenge-project__metrics challenge-project__metrics--two">
