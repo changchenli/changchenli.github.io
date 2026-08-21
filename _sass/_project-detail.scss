@@ -400,6 +400,8 @@
     p { margin: .55rem 0 0; color: var(--aircraft-muted); font-size: .72em; line-height: 1.55; }
   }
 
+  &__workstream-index--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
   &__workstream {
     margin: 0 0 5rem;
     scroll-margin-top: 5rem;
@@ -450,6 +452,105 @@
   }
 
   &__pipeline--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  &__pipeline--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  &__cv-overview { margin-top: -2.5rem; }
+
+  &__cv-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(15rem, .55fr);
+    gap: 1.5rem;
+    align-items: center;
+    margin: 0 0 2.5rem;
+
+    figure { min-width: 0; margin: 0; }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--aircraft-line);
+      background: var(--challenge-soft);
+    }
+    figcaption {
+      padding-top: .6rem;
+      color: var(--aircraft-muted);
+      font-size: .68em;
+      line-height: 1.5;
+    }
+  }
+
+  &__cv-notes {
+    span { color: var(--aircraft-green); font-size: .62em; font-weight: 600; letter-spacing: .08em; }
+    h4 { margin: .65rem 0 .7rem; font-size: .95em; line-height: 1.35; }
+    > p { margin: 0; color: var(--aircraft-muted); font-size: .73em; line-height: 1.65; }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      margin: 1.2rem 0 0;
+      padding: 1px;
+      list-style: none;
+      background: var(--aircraft-line);
+    }
+    li { min-width: 0; padding: .7rem; background: var(--challenge-soft); }
+    li strong, li span { display: block; }
+    li strong { color: var(--aircraft-ink); font-size: .72em; }
+    li span { margin-top: .25rem; color: var(--aircraft-muted); font-size: .55em; font-weight: 400; letter-spacing: 0; }
+  }
+
+  &__cv-strategy {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin: 0 0 1.5rem;
+    border: 1px solid var(--aircraft-line);
+    background: var(--aircraft-line);
+
+    div { padding: 1.15rem 1.25rem; background: var(--challenge-soft); }
+    span, strong { display: block; }
+    span { color: var(--aircraft-green); font-size: .6em; font-weight: 600; letter-spacing: .08em; }
+    strong { margin-top: .55rem; font-size: .95em; }
+    p { margin: .4rem 0 0; color: var(--aircraft-muted); font-size: .7em; line-height: 1.55; }
+  }
+
+  &__cv-target-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0 0 2rem;
+
+    figure { min-width: 0; margin: 0; }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--aircraft-line);
+      background: var(--challenge-soft);
+    }
+    figcaption { padding-top: .65rem; font-size: .7em; line-height: 1.5; }
+    figcaption strong, figcaption span { display: block; }
+    figcaption span { margin-top: .2rem; color: var(--aircraft-muted); }
+  }
+
+  &__cv-roi-pipeline { margin-bottom: 1.7rem; }
+
+  &__cv-comparison {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0 0 2rem;
+
+    figure { min-width: 0; margin: 0; }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--aircraft-line);
+      background: var(--challenge-soft);
+    }
+    figcaption { display: flex; gap: .75rem; align-items: baseline; padding-top: .65rem; font-size: .7em; }
+    figcaption span { color: var(--aircraft-green); font-size: .85em; font-weight: 600; letter-spacing: .08em; }
+  }
 
   &__section-note {
     max-width: 48rem;
@@ -644,6 +745,7 @@
 
   @media (max-width: 64em) {
     &__pipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    &__pipeline--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     &__metrics--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 
@@ -651,6 +753,10 @@
     &__hero,
     &__year-nav,
     &__workstream-index,
+    &__cv-feature,
+    &__cv-strategy,
+    &__cv-target-grid,
+    &__cv-comparison,
     &__dataset-showcase,
     &__pipeline,
     &__demo-grid,

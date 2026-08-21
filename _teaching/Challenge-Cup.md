@@ -147,64 +147,106 @@ comments: false
   <p>A VTOL fixed-wing aircraft searched a wide area and published validated target coordinates; a quadrotor then approached the detected people in mission order for close-range response.</p>
 </header>
 
-### System Architecture
+<div class="challenge-project__workstream-index challenge-project__workstream-index--three">
+  <div><span>01 · SCREEN</span><strong>High-Altitude Color-Based Screening</strong><p>Pre-localize red, yellow, and white rescue targets during wide-area flight.</p></div>
+  <div><span>02 · RECOGNIZE</span><strong>Altitude- and Target-Aware Feature Matching</strong><p>Switch feature strategies as target scale, symmetry, and image detail change.</p></div>
+  <div><span>03 · ACCELERATE</span><strong>ROI-Based Hierarchical Acceleration</strong><p>Restrict expensive feature extraction to color-supported image regions.</p></div>
+</div>
 
-<div class="challenge-project__hero">
+<ol class="challenge-project__pipeline challenge-project__pipeline--three challenge-project__cv-overview">
+  <li><span>HIGH ALTITUDE</span><strong>Color screening</strong><p>Scan the full scene and record candidate positions.</p></li>
+  <li><span>LOW ALTITUDE</span><strong>Feature recognition</strong><p>Confirm target identity with local image structure.</p></li>
+  <li><span>REAL TIME</span><strong>ROI acceleration</strong><p>Reduce the search area before feature extraction.</p></li>
+</ol>
+
+<section class="challenge-project__workstream" id="cv25-high-altitude" markdown="1">
+
+<header class="challenge-project__workstream-header">
+  <span>01 · HIGH-ALTITUDE SCREENING</span>
+  <h3>High-Altitude Color-Based Screening</h3>
+  <p>At flight heights above approximately 50 m, HSV color masks rapidly pre-localized the red, yellow, and white rescue targets. These candidates established the search order and constrained the later low-altitude recognition stage.</p>
+</header>
+
+<div class="challenge-project__cv-feature challenge-project__cv-feature--media-wide">
   <figure>
-    <img src="{{ '/images/challenge-cup/rescue-red-detection.jpg' | relative_url }}" alt="Processed aerial frame showing a detected red rescue target" loading="lazy" decoding="async">
+    <img src="{{ '/images/challenge-cup/cv25-high-altitude-screening.gif' | relative_url }}" alt="Alternating raw and processed high-altitude frames showing color-based screening of rescue targets" loading="lazy" decoding="async">
+    <figcaption>Original 100 m simulation frames alternate with the color-screening result.</figcaption>
   </figure>
-  <div>
-    <span>SEARCH AIRCRAFT → RESPONSE AIRCRAFT</span>
-    <h2>Coordinated wide-area rescue</h2>
-    <p>The 2025 system separated rapid high-altitude search from precise low-altitude response. ROS messaging connected perception, world-coordinate localization, and mission-state exchange between the two aircraft.</p>
+  <div class="challenge-project__cv-notes">
+    <span>WIDE-AREA PRE-LOCALIZATION</span>
+    <h4>Find candidates before close-range confirmation</h4>
+    <p>Color screening is used as a fast first pass rather than the final identity decision. Frames without a supported target color can be rejected before feature matching.</p>
+    <ul>
+      <li><strong>Red</strong><span>rescue target</span></li>
+      <li><strong>Yellow</strong><span>rescue target</span></li>
+      <li><strong>White</strong><span>rescue target</span></li>
+    </ul>
   </div>
 </div>
 
-### Autonomous Mission Workflow
+</section>
 
-<div class="aircraft-project__sequence challenge-project__mission">
-  <div><span>01</span><strong>Search</strong><p>The VTOL aircraft follows a restricted-area-aware waypoint route.</p></div>
-  <div><span>02</span><strong>Detect</strong><p>Color screening and feature matching identify rescue targets.</p></div>
-  <div><span>03</span><strong>Share</strong><p>Validated world coordinates are published through ROS.</p></div>
-  <div><span>04</span><strong>Respond</strong><p>The quadrotor approaches each target for close-range action.</p></div>
+<section class="challenge-project__workstream" id="cv25-feature-matching" markdown="1">
+
+<header class="challenge-project__workstream-header">
+  <span>02 · ADAPTIVE RECOGNITION</span>
+  <h3>Altitude- and Target-Aware Feature Matching</h3>
+  <p>Pure SIFT was retained when low-altitude imagery contained sufficient local detail. For blurred high-altitude views and symmetric red or yellow targets, Harris corners supplied stable structural anchors before SIFT description and matching.</p>
+</header>
+
+<div class="challenge-project__cv-strategy">
+  <div><span>LOW ALTITUDE</span><strong>SIFT</strong><p>Uses rich local texture for direct feature matching.</p></div>
+  <div><span>HIGH ALTITUDE / SYMMETRIC TARGET</span><strong>Harris + SIFT</strong><p>Combines boundary-sensitive corners with scale-aware descriptors.</p></div>
 </div>
 
-### Perception and Localization Pipeline
+<div class="challenge-project__cv-target-grid">
+  <figure><img src="{{ '/images/challenge-cup/cv25-red-feature-matching.gif' | relative_url }}" alt="Red rescue target feature-matching sequence" loading="lazy" decoding="async"><figcaption><strong>Red target</strong><span>Symmetry-aware structural matching</span></figcaption></figure>
+  <figure><img src="{{ '/images/challenge-cup/cv25-yellow-feature-matching.gif' | relative_url }}" alt="Yellow rescue target feature-matching sequence" loading="lazy" decoding="async"><figcaption><strong>Yellow target</strong><span>Stable matching across viewpoint change</span></figcaption></figure>
+  <figure><img src="{{ '/images/challenge-cup/cv25-white-feature-matching.gif' | relative_url }}" alt="White rescue target feature-matching sequence" loading="lazy" decoding="async"><figcaption><strong>White target</strong><span>Recognition under reduced color contrast</span></figcaption></figure>
+</div>
 
-<ol class="challenge-project__pipeline">
-  <li><span>Input</span><strong>Image and vehicle pose</strong><p>Synchronize camera data with the current aircraft state.</p></li>
-  <li><span>Screen</span><strong>HSV color filtering</strong><p>Reject empty frames and extract a compact region of interest.</p></li>
-  <li><span>Match</span><strong>SIFT or Harris + SIFT</strong><p>Select the feature strategy according to target geometry.</p></li>
-  <li><span>Validate</span><strong>Geometric checks</strong><p>Filter implausible contours and unstable center estimates.</p></li>
-  <li><span>Transform</span><strong>World coordinates</strong><p>Apply camera and vehicle poses before publishing the target.</p></li>
+<div class="challenge-project__metrics challenge-project__metrics--two">
+  <div><span>OVERALL RECOGNITION</span><strong>&gt;92%</strong><p>Reported recognition accuracy across the adaptive feature-matching workflow.</p></div>
+  <div><span>TRUSTED COORDINATES</span><strong>&gt;80%</strong><p>Reported trusted-coordinate ratio under occlusion and low-resolution tests.</p></div>
+</div>
+
+</section>
+
+<section class="challenge-project__workstream" id="cv25-roi-acceleration" markdown="1">
+
+<header class="challenge-project__workstream-header">
+  <span>03 · HIERARCHICAL ACCELERATION</span>
+  <h3>ROI-Based Hierarchical Acceleration</h3>
+  <p>The final pipeline combined color pre-screening, bounding-rectangle extraction, conditional downsampling, and feature matching inside the region of interest. This reduced full-frame computation while preserving the target-centered recognition result.</p>
+</header>
+
+<ol class="challenge-project__pipeline challenge-project__pipeline--four challenge-project__cv-roi-pipeline">
+  <li><span>01</span><strong>Color presence check</strong><p>Skip frames without red, yellow, or white evidence.</p></li>
+  <li><span>02</span><strong>Bounding rectangle</strong><p>Extract the minimum target-supported region.</p></li>
+  <li><span>03</span><strong>30% area rule</strong><p>Downsample when the ROI exceeds 30% of the full frame.</p></li>
+  <li><span>04</span><strong>Local matching</strong><p>Run feature extraction and matching only inside the ROI.</p></li>
 </ol>
 
-### Detection Results
-
-<div class="challenge-project__detection-strip">
-  <figure><img src="{{ '/images/challenge-cup/rescue-red-detection.jpg' | relative_url }}" alt="Detected red rescue target" loading="lazy" decoding="async"><figcaption>Red target</figcaption></figure>
-  <figure><img src="{{ '/images/challenge-cup/rescue-yellow-detection.jpg' | relative_url }}" alt="Detected yellow rescue target" loading="lazy" decoding="async"><figcaption>Yellow target</figcaption></figure>
-  <figure><img src="{{ '/images/challenge-cup/rescue-white-detection.jpg' | relative_url }}" alt="Detected white rescue target" loading="lazy" decoding="async"><figcaption>White target</figcaption></figure>
+<div class="challenge-project__cv-comparison">
+  <figure><img src="{{ '/images/challenge-cup/cv25-roi-input.jpg' | relative_url }}" alt="Original low-altitude frame before ROI-based feature matching" loading="lazy" decoding="async"><figcaption><span>INPUT</span><strong>Full camera frame</strong></figcaption></figure>
+  <figure><img src="{{ '/images/challenge-cup/cv25-roi-matched.jpg' | relative_url }}" alt="Processed low-altitude frame after ROI-based feature matching" loading="lazy" decoding="async"><figcaption><span>OUTPUT</span><strong>Target-centered match</strong></figcaption></figure>
 </div>
 
-### Performance Snapshot
+<div class="challenge-project__table-wrap challenge-project__table-wrap--compact" markdown="1">
 
-<p class="challenge-project__section-note">Report-level results from the 2025 perception workflow. A unified reproducible benchmark will replace them when the public code package is finalized.</p>
-
-<div class="challenge-project__table-wrap" markdown="1">
-
-| Recognition method | Reported processing time | Reported accuracy |
-| --- | ---: | ---: |
-| High-altitude color recognition | 20–30 ms/frame | >95% |
-| Feature matching | 50–60 ms/frame | >98% |
-| Hybrid recognition | 30–40 ms/frame | >93% |
+| Target class | Before optimization | ROI pipeline | Reported acceleration |
+| --- | ---: | ---: | ---: |
+| Red / yellow | 120–200 ms | 20–30 ms | 6–8× |
+| White | 150–300 ms | 60–80 ms | 2.5–5× |
 
 </div>
 
 <div class="challenge-project__metrics challenge-project__metrics--two">
-  <div><span>OPTIMIZATION</span><strong>3–4×</strong><p>Reported image-processing speedup after color pre-screening and ROI reduction.</p></div>
-  <div><span>LOCALIZATION</span><strong>−90%</strong><p>Reported reduction in coordinate error in the optimized simulation workflow.</p></div>
+  <div><span>PROCESSING SPEED</span><strong>3–4×</strong><p>Reported overall acceleration after color screening and ROI reduction.</p></div>
+  <div><span>COORDINATE ERROR</span><strong>−90%</strong><p>Reported reduction in coordinate-recognition error after optimization.</p></div>
 </div>
+
+</section>
 
 </section>
 
