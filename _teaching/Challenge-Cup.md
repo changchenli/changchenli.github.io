@@ -217,8 +217,24 @@ comments: false
 <header class="challenge-project__workstream-header">
   <span>03 · HIERARCHICAL ACCELERATION</span>
   <h3>ROI-Based Hierarchical Acceleration</h3>
-  <p>The final pipeline combined color pre-screening, bounding-rectangle extraction, conditional downsampling, and feature matching inside the region of interest. This reduced full-frame computation while preserving the target-centered recognition result.</p>
+  <p>Leaves and multi-color interference made full-frame feature matching significantly slower. A 120–200 ms image-processing delay meant that the relative target coordinate could arrive after the aircraft attitude had changed, so the quaternion used for the absolute-coordinate transformation no longer corresponded to the image capture time.</p>
 </header>
+
+<div class="challenge-project__cv-latency-story">
+  <article>
+    <span>UNOPTIMIZED COMPLEX FRAME</span>
+    <strong>120–200 ms</strong>
+    <p>Background leaves and color interference expanded the full-frame feature search.</p>
+  </article>
+  <div class="challenge-project__cv-latency-chain">
+    <span>Delayed relative coordinate</span><b>→</b><span>Image time ≠ quaternion time</span><b>→</b><span>Absolute-coordinate error</span>
+  </div>
+  <article class="is-optimized">
+    <span>OPTIMIZED COMPLEX FRAME</span>
+    <strong>≤30 ms</strong>
+    <p>ROI-restricted processing kept coordinate and attitude data closely time-aligned.</p>
+  </article>
+</div>
 
 <ol class="challenge-project__pipeline challenge-project__pipeline--four challenge-project__cv-roi-pipeline">
   <li><span>01</span><strong>Color presence check</strong><p>Skip frames without red, yellow, or white evidence.</p></li>
@@ -227,23 +243,18 @@ comments: false
   <li><span>04</span><strong>Local matching</strong><p>Run feature extraction and matching only inside the ROI.</p></li>
 </ol>
 
-<div class="challenge-project__cv-comparison">
-  <figure><img src="{{ '/images/challenge-cup/cv25-roi-input.jpg' | relative_url }}" alt="Original low-altitude frame before ROI-based feature matching" loading="lazy" decoding="async"><figcaption><span>INPUT</span><strong>Full camera frame</strong></figcaption></figure>
-  <figure><img src="{{ '/images/challenge-cup/cv25-roi-matched.jpg' | relative_url }}" alt="Processed low-altitude frame after ROI-based feature matching" loading="lazy" decoding="async"><figcaption><span>OUTPUT</span><strong>Target-centered match</strong></figcaption></figure>
-</div>
-
 <div class="challenge-project__table-wrap challenge-project__table-wrap--compact" markdown="1">
 
-| Target class | Before optimization | ROI pipeline | Reported acceleration |
-| --- | ---: | ---: | ---: |
-| Red / yellow | 120–200 ms | 20–30 ms | 6–8× |
-| White | 150–300 ms | 60–80 ms | 2.5–5× |
+| Operating condition | Per-frame processing time | Coordinate consequence |
+| --- | ---: | --- |
+| Complex background, full-frame matching | 120–200 ms | Relative coordinate may be paired with a later aircraft quaternion |
+| Complex background, ROI pipeline | ≤30 ms | Image and attitude data remain closely time-aligned |
 
 </div>
 
 <div class="challenge-project__metrics challenge-project__metrics--two">
-  <div><span>PROCESSING SPEED</span><strong>3–4×</strong><p>Reported overall acceleration after color screening and ROI reduction.</p></div>
-  <div><span>COORDINATE ERROR</span><strong>−90%</strong><p>Reported reduction in coordinate-recognition error after optimization.</p></div>
+  <div><span>COMPLEX-FRAME LATENCY</span><strong>≤30 ms</strong><p>Color screening and ROI reduction bound the processing time of interference-heavy frames.</p></div>
+  <div><span>ABSOLUTE COORDINATES</span><strong>IMPROVED</strong><p>Lower latency keeps the image-derived relative coordinate consistent with the quaternion used in the world-frame transformation.</p></div>
 </div>
 
 </section>
