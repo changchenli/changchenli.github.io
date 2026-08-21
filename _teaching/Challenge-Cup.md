@@ -220,13 +220,6 @@ comments: false
   <p>Leaves and multi-color interference made full-frame feature matching significantly slower. A 120–200 ms image-processing delay meant that the relative target coordinate could arrive after the aircraft attitude had changed, so the quaternion used for the absolute-coordinate transformation no longer corresponded to the image capture time.</p>
 </header>
 
-<ol class="challenge-project__pipeline challenge-project__pipeline--four challenge-project__cv-roi-pipeline">
-  <li><span>01</span><strong>Color presence check</strong><p>Skip frames without red, yellow, or white evidence.</p></li>
-  <li><span>02</span><strong>Bounding rectangle</strong><p>Extract the minimum target-supported region.</p></li>
-  <li><span>03</span><strong>30% area rule</strong><p>Downsample when the ROI exceeds 30% of the full frame.</p></li>
-  <li><span>04</span><strong>Local matching</strong><p>Run feature extraction and matching only inside the ROI.</p></li>
-</ol>
-
 <div class="challenge-project__cv-causal-strip">
   <article><span>PROCESSING BOTTLENECK</span><strong>120–200 ms</strong><p>Leaves and multi-color interference expand full-frame matching.</p></article>
   <b>→</b>
@@ -234,6 +227,13 @@ comments: false
   <b>→</b>
   <article><span>WORLD-FRAME EFFECT</span><strong>Coordinate drift</strong><p>The absolute-coordinate transformation accumulates a larger error.</p></article>
 </div>
+
+<ol class="challenge-project__pipeline challenge-project__pipeline--four challenge-project__cv-roi-pipeline">
+  <li><span>01</span><strong>Color presence check</strong><p>Skip frames without red, yellow, or white evidence.</p></li>
+  <li><span>02</span><strong>Bounding rectangle</strong><p>Extract the minimum target-supported region.</p></li>
+  <li><span>03</span><strong>30% area rule</strong><p>Downsample when the ROI exceeds 30% of the full frame.</p></li>
+  <li><span>04</span><strong>Local matching</strong><p>Run feature extraction and matching only inside the ROI.</p></li>
+</ol>
 
 <div class="challenge-project__table-wrap challenge-project__table-wrap--compact" markdown="1">
 
